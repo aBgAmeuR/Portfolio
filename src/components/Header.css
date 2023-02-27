@@ -1,0 +1,42 @@
+/* ==================== HEADER ==================== */
+
+header {
+  width: 100vw;
+  height: 80px;
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .div-center {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .main-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 32px;
+}
+
+header .links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .links a:hover svg path {
+  fill: var(--primary-color);
+}

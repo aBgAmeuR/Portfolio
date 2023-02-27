@@ -12,6 +12,7 @@
 
   --pricipal-color: #c0c0c0;
   --secondary-color: #393d46;
+  --tertiary-color: #fc4c2d;
 }
 
 * {
@@ -50,47 +51,42 @@ p {
   line-height: 24px;
 }
 
-/* ==================== HEADER ==================== */
-
-header {
-  width: 100vw;
-  height: 80px;
-  background-color: var(--secondary-bg);
+.App {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-header .div-center {
-  max-width: 700px;
+/* ==================== SECTION 1 ==================== */
+
+#section1 {
+  max-width: 828px;
   width: 100%;
-  margin: 0 4rem;
+  padding: 0 4rem;
+}
+
+#section1 .desc {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 40px;
+}
+
+#section1 .btn {
+  margin-top: 13px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 12px;
 }
 
-header .main-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#section1 .btn a {
+  margin-right: 0px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--tertiary-color);
 }
 
-header .links {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 32px;
+#section1 .btn a:hover {
+  margin-right: 10px;
 }
-
-header .links a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header .links a:hover svg path {
-  fill: var(--primary-color);
-}
-
-/* ==================== MAIN ==================== */
