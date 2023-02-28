@@ -1,0 +1,62 @@
+/* ==================== PROJETS ==================== */
+
+#Projets {
+  max-width: 828px;
+  width: 100%;
+  padding: 0 4rem;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+
+#Projets {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ==================== PROJET ==================== */
+
+.Projet {
+  width: 100%;
+  height: 200px;
+  color: white;
+  display: grid;
+  grid-template: "left-top right" 50%
+                 "left-buttom right" 50% / 200px 1fr;
+}
+
+.Projet .left-top {
+  grid-area: left-top;
+  padding: 12px;
+  padding-bottom: 0;
+}
+
+.Projet .left-buttom {
+  grid-area: left-buttom;
+  padding: 12px;
+  padding-top: 0;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+
+.Projet .left-buttom ul {
+  list-style: none;
+  display: flex;
+  align-items: start;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.Projet .right {
+  grid-area: right;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Projet .right img {
+  width: auto;
+  height: 100%;
+}

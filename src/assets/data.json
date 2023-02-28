@@ -4,10 +4,11 @@
         "route": "budient",
         "type": "Application web",
         "year": 2023,
-        "image": "./img/Budient.png",
+        "image": "budient",
+        "color": "#2EC4B6",
         "technologies": [
             "nodejs",
-            "reactjs",
+            "react",
             "typescript",
             "express",
             "mongodb",
@@ -25,10 +26,11 @@
         "route": "smash-or-pass",
         "type": "API REST",
         "year": 2023,
-        "image": "./img/smash-or-pass.png",
+        "image": "smash-or-pass",
+        "color": "#FA7531",
         "technologies": [
             "nodejs",
-            "javacript",
+            "javascript",
             "express",
             "mysql",
             "jwt"
@@ -43,7 +45,8 @@
         "route":"tic-tac-toe",
         "type": "Jeu",
         "year": 2022,
-        "image": "./img/tic-tac-toe.png",
+        "image": "tic-tac-toe",
+        "color": "#006600",
         "technologies": [
             "html",
             "css",

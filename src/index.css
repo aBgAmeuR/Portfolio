@@ -90,3 +90,9 @@ p {
 #section1 .btn a:hover {
   margin-right: 10px;
 }
+
+/* ==================== SECTION 2 ==================== */
+
+#section2 {
+  width: 100%;
+}

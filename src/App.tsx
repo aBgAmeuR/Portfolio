@@ -17,7 +17,7 @@ function App() {
         </div>
       </section>
       <section id="section2">
-        {/* <ProjetsList /> */}
+        <ProjetsList />
       </section>
     </div>
   )
