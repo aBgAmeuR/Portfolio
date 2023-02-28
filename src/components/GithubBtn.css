@@ -1,0 +1,20 @@
+/* ==================== GITHUB BTN ==================== */
+
+.github-btn {
+  border: 1px solid var(--pricipal-color);
+}
+
+.github-btn a {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--pricipal-color);
+  padding: 12px 22px;
+}
+
+.github-btn a svg path {
+  fill: var(--primary-color);
+}

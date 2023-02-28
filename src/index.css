@@ -55,6 +55,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 /* ==================== SECTION 1 ==================== */
@@ -95,4 +96,14 @@ p {
 
 #section2 {
   width: 100%;
+}
+
+/* ==================== SECTION 3 ==================== */
+
+#section3 {
+  margin: 32px 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
 }

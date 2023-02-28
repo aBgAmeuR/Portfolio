@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header'
 import ProjetsList from './components/ProjetsList'
+import GithubBtn from './components/GitHubBtn'
 
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
       </section>
       <section id="section2">
         <ProjetsList />
+      </section>
+      <section id="section3">
+        <GithubBtn />
+        <h4>©2023</h4>
       </section>
     </div>
   )
