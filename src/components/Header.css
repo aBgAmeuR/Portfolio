@@ -40,3 +40,9 @@ header .links a {
 header .links a:hover svg path {
   fill: var(--primary-color);
 }
+
+@media screen and (max-width: 520px) {
+  header .div-center {
+    margin: 0 2rem;
+  }
+}

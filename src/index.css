@@ -92,6 +92,12 @@ p {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 520px) {
+  #section1 {
+    padding: 0 2rem;
+  }
+}
+
 /* ==================== SECTION 2 ==================== */
 
 #section2 {

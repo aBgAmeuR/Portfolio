@@ -1,7 +1,7 @@
 import './App.css'
+import GithubBtn from './components/GithubBtn'
 import Header from './components/Header'
 import ProjetsList from './components/ProjetsList'
-import GithubBtn from './components/GitHubBtn'
 
 
 function App() {

@@ -14,6 +14,12 @@
   gap: 32px;
 }
 
+@media screen and (max-width: 520px) {
+  #Projets {
+    padding: 0 2rem;
+  }
+}
+
 /* ==================== PROJET ==================== */
 
 .Projet {
@@ -21,8 +27,9 @@
   height: 200px;
   color: white;
   display: grid;
-  grid-template: "left-top right" 50%
-                 "left-buttom right" 50% / 200px 1fr;
+  grid-template:
+    "left-top right" 50%
+    "left-buttom right" 50% / 200px 1fr;
 }
 
 .Projet .left-top {
@@ -59,4 +66,29 @@
 .Projet .right img {
   width: auto;
   height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .Projet {
+    width: 100%;
+    height: 300px;
+    color: white;
+    display: grid;
+    grid-template:
+      "left-top" 25%
+      "left-buttom" 25%
+      "right" 50% / 1fr;
+  }
+
+  .Projet .right img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .Projet .right img {
+    width: auto;
+    height: 100%;
+  }
 }
