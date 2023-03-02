@@ -5,8 +5,6 @@ import "./Projets.css";
 
 export default class ProjetsList extends Component {
   render() {
-    // console.log(data);
-
     return (
       <div id="Projets">
         {data.map((data, index) => (

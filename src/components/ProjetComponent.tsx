@@ -24,7 +24,7 @@ function ProjetComponent(props: Props) {
     imagesRef.current.forEach((imageRef, index) => {
       if (imageRef && props.data.technologies[index]) {
         const img = new Image();
-        img.src = `../svg/${props.data.technologies[index]}.svg`;
+        img.src = `/svg/${props.data.technologies[index]}.svg`;
         console.log(img.src);
 
         img.onload = () => {
@@ -52,7 +52,7 @@ function ProjetComponent(props: Props) {
       </div>
       <div className="right">
         <img
-          src={`./src/assets/img/${props.data.image}-min.png`}
+          src={`/img/${props.data.image}-min.png`}
           alt={`${props.data.title} image`}
         />
       </div>

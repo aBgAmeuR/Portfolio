@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import './Header.css';
 
 const flexCenter = {
   display: "flex",
