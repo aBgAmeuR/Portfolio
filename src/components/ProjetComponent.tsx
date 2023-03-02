@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 type Props = {
   data: {
@@ -17,6 +17,23 @@ type Props = {
 };
 
 function ProjetComponent(props: Props) {
+  const imagesRef = useRef<(HTMLImageElement | null)[]>([]);
+
+  useEffect(() => {
+    // On parcourt tous les refs d'images et on charge l'image SVG correspondante
+    imagesRef.current.forEach((imageRef, index) => {
+      if (imageRef && props.data.technologies[index]) {
+        const img = new Image();
+        img.src = `../svg/${props.data.technologies[index]}.svg`;
+        console.log(img.src);
+
+        img.onload = () => {
+          imageRef.src = img.src;
+        };
+      }
+    });
+  }, [props.data.technologies]);
+
   return (
     <div className="Projet" style={{ background: props.data.color }}>
       <div className="left-top">
@@ -28,7 +45,7 @@ function ProjetComponent(props: Props) {
         <ul>
           {props.data.technologies.map((tech, index) => (
             <li key={index}>
-              <img src={`./src/assets/svg/${tech}.svg`} alt={tech} />
+              <img ref={(el) => (imagesRef.current[index] = el)} alt={tech} />
             </li>
           ))}
         </ul>
