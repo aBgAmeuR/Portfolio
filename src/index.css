@@ -58,6 +58,22 @@ p {
   overflow-x: hidden;
 }
 
+/* ==================== HEADER ==================== */
+
+header .div-center {
+  padding: 0 4rem;
+}
+
+header a:hover svg path {
+  fill: var(--primary-color);
+}
+
+@media screen and (max-width: 520px) {
+  header .div-center {
+    padding: 0 2rem;
+  }
+}
+
 /* ==================== SECTION 1 ==================== */
 
 #section1 {
