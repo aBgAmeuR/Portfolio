@@ -129,3 +129,14 @@ header a:hover svg path {
   gap: 64px;
   align-items: center;
 }
+
+/* ==================== PROJET PAGE ==================== */
+
+.contentProjet {
+  display: grid;
+  grid-template:
+  "objectif deroulement" min-content
+  "github deroulement" auto
+  "technologies deroulement" 1fr / 1fr 1fr;
+  height:fit-content;
+}
