@@ -1,3 +1,4 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import GithubBtn from "./components/GithubBtn";
 import "./ProjetPage.css";
 
@@ -24,7 +25,22 @@ const imageProjetDiv = {
   overflow: "hidden",
 };
 
+
+
 const ProjetPage = (props: Props) => {
+
+  function image() {
+    return (
+      <div>
+        <LazyLoadImage
+          alt={`${props.data.title} image`}
+          src={`/img/${props.data.image}.png`}
+          style={{ minHeight: "100%", width: "100%" }}
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       style={{
@@ -35,11 +51,7 @@ const ProjetPage = (props: Props) => {
       }}
     >
       <div style={imageProjetDiv}>
-        <img
-          src={`/img/${props.data.image}.png`}
-          alt={`${props.data.title} image`}
-          style={{ minHeight: "100%", width: "100%" }}
-        />
+        {image()}
       </div>
       <main
         style={{

@@ -4,16 +4,18 @@ import App from "./App";
 import "./index.css";
 import ProjetPage from "./ProjetPage";
 import data from "./assets/data.json";
-import { Route, Routes } from "react-router-dom";
+import { Route, RouterProvider, Routes, createBrowserRouter } from "react-router-dom";
+
+const router = createBrowserRouter([
+  { path: "", element: <App /> },
+  { path: "projet/budient", element: <ProjetPage data={data[0]} /> },
+  { path: "projet/smash-or-pass", element: <ProjetPage data={data[1]} /> },
+  { path: "projet/tic-tac-toe", element: <ProjetPage data={data[2]} /> },
+
+]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    {/* <App /> */}
-    <ProjetPage data={data[0]} />
-    <Route path="home" element={<Home />}>
-      <Route path="project/:projectId" element={<Project />}>
-        <Route path=":taskId" element={<Task />} />
-      </Route>
-    </Route>
+     <RouterProvider router={router} />
   </React.StrictMode>
 );
