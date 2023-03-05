@@ -78,7 +78,7 @@ const ProjetPage = (props: Props) => {
             <p>{props.data.deroulement}</p>
           </div>
           <div style={{ gridArea: "github", width: "200px", height: "55px", margin: "16px 0" }}>
-            <GithubBtn link={props.data.github} />
+            <GithubBtn link={props.data.github} text="Code source" />
           </div>
           <div style={{ gridArea: "technologies" }}>
             <h3 style={{ marginBottom: "2px", color: "white" }}>

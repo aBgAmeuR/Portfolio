@@ -21,7 +21,7 @@ function App() {
         <ProjetsList />
       </section>
       <section id="section3">
-        <GithubBtn link='https://github.com/aBgAmeuR'/>
+        <GithubBtn link='https://github.com/aBgAmeuR' text='Plus de projets'/>
         <h4>©2023</h4>
       </section>
     </div>
