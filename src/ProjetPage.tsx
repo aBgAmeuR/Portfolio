@@ -18,7 +18,8 @@ type Props = {
   };
 };
 const imageProjetDiv = {
-  height: "33vh",
+  height: "auto",
+  maxHeight: "33vh",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -48,6 +49,8 @@ const ProjetPage = (props: Props) => {
         flexDirection: "column",
         alignItems: "center",
         overflowX: "hidden",
+        paddingBottom: "32px",
+        height: "100vh",
       }}
     >
       <div style={imageProjetDiv}>
