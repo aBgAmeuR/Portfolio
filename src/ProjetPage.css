@@ -1,2 +1,53 @@
 /* ==================== PROJET PAGE ==================== */
 
+.ProjetPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding-bottom: 32px;
+  height: 100vh;
+}
+
+.ProjetPage main {
+  max-width: 828px;
+  width: 100%;
+  padding: 0 4rem;
+}
+
+.contentProjet {
+  display: grid;
+  grid-template:
+    "objectif deroulement" min-content
+    "github deroulement" auto
+    "technologies deroulement" 1fr / 1fr 1fr;
+  height: fit-content;
+}
+
+.imageProjetDiv {
+  height: auto;
+  max-height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 828px) {
+  .contentProjet {
+    grid-template:
+    "objectif" min-content
+    "deroulement" auto
+    "github" auto
+    "technologies" 1fr / 1fr;
+  }
+  .imageProjetDiv {
+    min-height: 25vh;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .ProjetPage main {
+    padding: 0 2rem;
+  }
+}

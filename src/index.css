@@ -131,12 +131,3 @@ header a:hover svg path {
 }
 
 /* ==================== PROJET PAGE ==================== */
-
-.contentProjet {
-  display: grid;
-  grid-template:
-  "objectif deroulement" min-content
-  "github deroulement" auto
-  "technologies deroulement" 1fr / 1fr 1fr;
-  height:fit-content;
-}

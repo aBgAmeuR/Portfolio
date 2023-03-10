@@ -17,19 +17,8 @@ type Props = {
     deroulement: string;
   };
 };
-const imageProjetDiv = {
-  height: "auto",
-  maxHeight: "33vh",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  overflow: "hidden",
-};
-
-
 
 const ProjetPage = (props: Props) => {
-
   function image() {
     return (
       <div>
@@ -43,30 +32,13 @@ const ProjetPage = (props: Props) => {
   }
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        overflowX: "hidden",
-        paddingBottom: "32px",
-        height: "100vh",
-      }}
-    >
-      <div style={imageProjetDiv}>
-        {image()}
-      </div>
-      <main
-        style={{
-          maxWidth: "828px",
-          width: "100%",
-          padding: "0 4rem",
-        }}
-      >
+    <div className="ProjetPage">
+      <div className="imageProjetDiv">{image()}</div>
+      <main>
         <h1 style={{ marginTop: "20px", color: "white" }}>
           {props.data.title}
         </h1>
-        <p style={{marginBottom: "8px"}}>{props.data.desc}</p>
+        <p style={{ marginBottom: "8px" }}>{props.data.desc}</p>
         <div className="contentProjet">
           <div style={{ gridArea: "objectif", paddingRight: "20px" }}>
             <h3 style={{ margin: "8px 0", color: "white" }}>
@@ -80,7 +52,14 @@ const ProjetPage = (props: Props) => {
             </h3>
             <p>{props.data.deroulement}</p>
           </div>
-          <div style={{ gridArea: "github", width: "200px", height: "55px", margin: "16px 0" }}>
+          <div
+            style={{
+              gridArea: "github",
+              width: "200px",
+              height: "55px",
+              margin: "16px 0",
+            }}
+          >
             <GithubBtn link={props.data.github} text="Code source" />
           </div>
           <div style={{ gridArea: "technologies" }}>
