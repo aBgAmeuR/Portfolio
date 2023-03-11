@@ -36,7 +36,7 @@
             "jwt"
         ],
         "desc": "L’API fusionne les concepts de Tier list et de Smash or Pass. Le but de cette API est de permettre à des utilisateurs de créer et gérer des listes (Smash list) et de les partager.",
-        "github": "https://github.com/aBgAmeuR/Budient",
+        "github": "https://github.com/aBgAmeuR/Smash-or-Pass",
         "objectif": "Concevoir une API RESTful en utilisant les technologies telles que Node.js, Express.js, Swagger, et MySQL. Implémenter des fonctionnalités d'authentification et d'autorisation pour restreindre l'accès aux ressources de l'API.",
         "deroulement": "J’ai commencé par définir les spécifications de l'API, en déterminant les endpoints nécessaires pour atteindre les objectifs du projet. Ensuite, j'ai choisi les technologies à utiliser, en prenant en compte mes compétences et les exigences du projet, telles que la rapidité de développement, la sécurité et la performance. Enfin, j'ai développé l'API en suivant les spécifications définies et en testant chaque endpoint pour m'assurer de son bon fonctionnement."
     },
@@ -53,7 +53,7 @@
             "javascript"
         ],
         "desc": "L’API fusionne les concepts de Tier list et de Smash or Pass. Le but de cette API est de permettre à des utilisateurs de créer et gérer des listes (Smash list) et de les partager.",
-        "github": "https://github.com/aBgAmeuR/Budient",
+        "github": "https://github.com/aBgAmeuR/Tic-Tac-Toe",
         "objectif": "Le projet vise à développer les compétences en programmation JavaScript, en utilisant les concepts de base de la logique de programmation tels que les boucles, les conditions, les tableaux et les fonctions.",
         "deroulement": "J'ai commencé par concevoir l'interface utilisateur du jeu Tic-Tac-Toe en utilisant HTML et CSS. Enfin, j'ai implémenté la logique du jeu en JavaScript en créant des fonctions pour gérer les mouvements du joueur, pour vérifier les conditions de victoire et pour contrôler le déroulement du jeu."
     }
