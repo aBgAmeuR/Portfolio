@@ -1,5 +1,21 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/Font/poppins-regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/Font/poppins-medium.woff2") format("woff2");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/Font/poppins-semibold.woff2") format("woff2");
+  font-weight: 600;
+}
+
 :root {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
 
