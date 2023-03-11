@@ -1,6 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import GithubBtn from "./components/GithubBtn";
-import "./ProjetPage.css";
+import GithubBtn from "../components/GithubBtn";
 
 type Props = {
   data: {
