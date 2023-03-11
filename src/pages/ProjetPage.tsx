@@ -1,5 +1,6 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import GithubBtn from "../components/GithubBtn";
+import icons from "../assets/icons.json";
 
 type Props = {
   data: {
@@ -29,6 +30,13 @@ const ProjetPage = (props: Props) => {
       </div>
     );
   }
+
+  function getIconCode(iconName: string) {
+    const icon = icons.find((icon) => icon.name === iconName);
+
+    return icon ? icon.code : "";
+  }
+
 
   return (
     <div className="ProjetPage">
@@ -74,10 +82,11 @@ const ProjetPage = (props: Props) => {
               }}
             >
               {props.data.technologies.map((tech, index) => (
-                <li key={index}>
-                  <img src={`/svg/${tech}.svg`} alt={tech} />
-                </li>
-              ))}
+            <li
+              key={index}
+              dangerouslySetInnerHTML={{ __html: getIconCode(tech) }}
+            />
+          ))}
             </ul>
           </div>
         </div>

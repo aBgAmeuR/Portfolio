@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import icons from "../assets/icons.json";
 
 type Props = {
   data: {
@@ -19,23 +20,6 @@ type Props = {
 };
 
 function ProjetComponent(props: Props) {
-  const imagesRef = useRef<(HTMLImageElement | null)[]>([]);
-
-  useEffect(() => {
-    // On parcourt tous les refs d'images et on charge l'image SVG correspondante
-    imagesRef.current.forEach((imageRef, index) => {
-      if (imageRef && props.data.technologies[index]) {
-        const img = new Image();
-        img.src = `/svg/${props.data.technologies[index]}.svg`;
-        console.log(img.src);
-
-        img.onload = () => {
-          imageRef.src = img.src;
-        };
-      }
-    });
-  }, [props.data.technologies]);
-
   let navigate = useNavigate();
   function handleClick() {
     console.log("click");
@@ -54,6 +38,12 @@ function ProjetComponent(props: Props) {
     );
   }
 
+  function getIconCode(iconName: string) {
+    const icon = icons.find((icon) => icon.name === iconName);
+
+    return icon ? icon.code : "";
+  }
+
   return (
     <div
       className="Projet"
@@ -68,9 +58,10 @@ function ProjetComponent(props: Props) {
         <h4>Technologies</h4>
         <ul>
           {props.data.technologies.map((tech, index) => (
-            <li key={index}>
-              <img ref={(el) => (imagesRef.current[index] = el)} alt={tech} />
-            </li>
+            <li
+              key={index}
+              dangerouslySetInnerHTML={{ __html: getIconCode(tech) }}
+            />
           ))}
         </ul>
       </div>
