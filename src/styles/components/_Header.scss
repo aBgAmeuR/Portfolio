@@ -13,6 +13,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 4rem;
 }
 
 .flexCenter {
@@ -21,9 +22,22 @@ header {
   justify-content: center;
 }
 
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 32px;
+}
+
 .links {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 2rem;
+}
+
+@media screen and (max-width: 520px) {
+  .divCenter {
+    padding: 0 2rem;
+  }
 }
