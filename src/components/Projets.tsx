@@ -1,7 +1,6 @@
 import React, { Component, ReactPropTypes } from "react";
-import ProjetComponent from "./ProjetComponent";
+import ProjetComponent from "./Projet";
 import data from "../assets/data.json";
-import "./Projets.css";
 
 export default class ProjetsList extends Component {
   render() {

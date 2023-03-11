@@ -1,6 +1,6 @@
 import GithubBtn from '../components/GithubBtn'
 import Header from '../components/Header'
-import ProjetsList from '../components/ProjetsList'
+import ProjetsList from '../components/Projets'
 
 
 function Home() {

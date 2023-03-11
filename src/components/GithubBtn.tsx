@@ -1,5 +1,3 @@
-import './GithubBtn.css'
-
 type Props = {
   link: string,
   text: string
