@@ -31,7 +31,7 @@ function ProjetComponent(props: Props) {
       <div>
         <LazyLoadImage
           alt={`${props.data.title} image`}
-          src={`/img/${props.data.image}-min.png`}
+          src={`/img/${props.data.image}-min.webp`}
           style={{ userSelect: "none" }}
         />
       </div>

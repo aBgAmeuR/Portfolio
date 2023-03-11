@@ -24,7 +24,7 @@ const ProjetPage = (props: Props) => {
       <div>
         <LazyLoadImage
           alt={`${props.data.title} image`}
-          src={`/img/${props.data.image}.png`}
+          src={`/img/${props.data.image}.webp`}
           style={{ minHeight: "100%", width: "100%" }}
         />
       </div>
