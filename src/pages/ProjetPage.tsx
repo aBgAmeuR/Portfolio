@@ -100,7 +100,7 @@ const ProjetPage = (props: Props) => {
             </ul>
           </div>
         </div>
-      <LateralBar text={'Projet'} height={height}></LateralBar>
+        <LateralBar text={'Projet'}></LateralBar>
       </main>
     </div>
   );

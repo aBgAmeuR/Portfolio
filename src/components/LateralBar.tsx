@@ -1,9 +1,8 @@
 type LateralBarProps = {
   text: String;
-  height: number;
 };
 
-const LateralBar = ({ text, height }: LateralBarProps) => {
+const LateralBar = ({ text }: LateralBarProps) => {
   return (
     <div id="lateral-bar-component">
       <div className="text">
@@ -11,7 +10,7 @@ const LateralBar = ({ text, height }: LateralBarProps) => {
         <p>{text}</p>
         <p>{">"}</p>
       </div>
-      <div className="lateral-bar" ></div>
+      <div className="lateral-bar"></div>
     </div>
   );
 };

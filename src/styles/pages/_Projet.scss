@@ -55,13 +55,15 @@
 
 .ProjetPage #lateral-bar-component {
   position: absolute;
-  transform: rotate(90deg);
   z-index: -1;
-  right: -42%;
-  top: 120px;
+  right: -10%;
+  bottom: -32px;
   overflow: hidden;
   .text {
-    padding-left: 280px;
+    transform: rotate(90deg);
+    position: relative;
+    top: 340px;
+    left: -40px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -75,8 +77,8 @@
     }
   }
   .lateral-bar {
-    height: 1px;
-    width: 100vh;
+    width: 1px;
+    height: 100vh;
     background-color: #393d46;
   }
 }
