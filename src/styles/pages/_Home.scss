@@ -69,3 +69,40 @@ header a:hover svg path {
   gap: 64px;
   align-items: center;
 }
+
+/* ==================== LATERAL BAR ==================== */
+
+.App {
+  position: relative;
+}
+
+.App #lateral-bar-component {
+  position: absolute;
+  z-index: -1;
+  left: calc(50% + 390px);
+  top: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  .text {
+    transform: rotate(90deg);
+    position: relative;
+    top: 180px;
+    left: -40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    color: #393d46;
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .lateral-bar {
+    width: 1px;
+    height: 100%;
+    background-color: #393d46;
+  }
+}

@@ -40,13 +40,6 @@ const ProjetPage = (props: Props) => {
 
 
   }
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    return setHeight((document.querySelector(".ProjetPage")?.clientHeight) || 0);
-  }, []);
-
-
 
   return (
     <div className="ProjetPage">

@@ -1,7 +1,7 @@
 import GithubBtn from '../components/GithubBtn'
 import Header from '../components/Header'
 import ProjetsList from '../components/Projets'
-
+import LateralBar from "../components/LateralBar";
 
 function Home() {
   return (
@@ -23,6 +23,7 @@ function Home() {
         <GithubBtn link='https://github.com/aBgAmeuR' text='Plus de projets'/>
         <h4>©2023</h4>
       </section>
+      <LateralBar text={'Work'}></LateralBar>
     </div>
   )
 }
