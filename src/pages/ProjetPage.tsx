@@ -1,6 +1,8 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import GithubBtn from "../components/GithubBtn";
+import LateralBar from "../components/LateralBar";
 import icons from "../assets/icons.json";
+import { useEffect, useState } from "react";
 
 type Props = {
   data: {
@@ -35,7 +37,15 @@ const ProjetPage = (props: Props) => {
     const icon = icons.find((icon) => icon.name === iconName);
 
     return icon ? icon.code : "";
+
+
   }
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    return setHeight((document.querySelector(".ProjetPage")?.clientHeight) || 0);
+  }, []);
+
 
 
   return (
@@ -82,14 +92,15 @@ const ProjetPage = (props: Props) => {
               }}
             >
               {props.data.technologies.map((tech, index) => (
-            <li
-              key={index}
-              dangerouslySetInnerHTML={{ __html: getIconCode(tech) }}
-            />
-          ))}
+                <li
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: getIconCode(tech) }}
+                />
+              ))}
             </ul>
           </div>
         </div>
+      <LateralBar text={'Projet'} height={height}></LateralBar>
       </main>
     </div>
   );

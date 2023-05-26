@@ -13,6 +13,7 @@
   max-width: 828px;
   width: 100%;
   padding: 0 4rem;
+  position: relative;
 }
 
 .contentProjet {
@@ -49,5 +50,33 @@
 @media screen and (max-width: 520px) {
   .ProjetPage main {
     padding: 0 2rem;
+  }
+}
+
+.ProjetPage #lateral-bar-component {
+  position: absolute;
+  transform: rotate(90deg);
+  z-index: -1;
+  right: -42%;
+  top: 120px;
+  overflow: hidden;
+  .text {
+    padding-left: 280px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    color: #393d46;
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .lateral-bar {
+    height: 1px;
+    width: 100vh;
+    background-color: #393d46;
   }
 }
