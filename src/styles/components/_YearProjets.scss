@@ -1,0 +1,20 @@
+.YearProjets {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transform: translate(-82px, 16px);
+  gap: 8px;
+  height: 0;
+  p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #C0C0C0;
+  }
+  .ligne {
+    height: 1px;
+    width: 16px;
+    background: #393D46;
+  }
+}
