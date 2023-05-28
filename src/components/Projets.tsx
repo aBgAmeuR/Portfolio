@@ -24,5 +24,4 @@ const ProjetsList: React.FC = () => {
   return <div id="Projets">{projetsElements}</div>;
 }
 
-
 export default ProjetsList;
