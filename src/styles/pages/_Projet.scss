@@ -34,6 +34,47 @@
   overflow: hidden;
 }
 
+
+.ProjetPage #lateral-bar-component {
+  display: block;
+  position: absolute;
+  right: -100px;
+  top: 0;
+  bottom: 0;
+  .text {
+    transform: rotate(90deg) translateX(100%);
+    position: relative;
+    left: -40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    color: #393d46;
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: #393d46;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ProjetPage #lateral-bar-component {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 828px) {
   .contentProjet {
     grid-template:
@@ -50,35 +91,5 @@
 @media screen and (max-width: 520px) {
   .ProjetPage main {
     padding: 0 2rem;
-  }
-}
-
-.ProjetPage #lateral-bar-component {
-  position: absolute;
-  z-index: -1;
-  right: -10%;
-  bottom: -32px;
-  overflow: hidden;
-  .text {
-    transform: rotate(90deg);
-    position: relative;
-    top: 340px;
-    left: -40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    gap: 15px;
-    color: #393d46;
-    p {
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 30px;
-    }
-  }
-  .lateral-bar {
-    width: 1px;
-    height: 100vh;
-    background-color: #393d46;
   }
 }

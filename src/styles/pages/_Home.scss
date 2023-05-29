@@ -100,9 +100,14 @@ header a:hover svg path {
       line-height: 30px;
     }
   }
-  .lateral-bar {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     width: 1px;
-    height: 100%;
     background-color: #393d46;
+    height: 100%;
   }
 }
