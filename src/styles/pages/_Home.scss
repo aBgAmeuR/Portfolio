@@ -77,6 +77,7 @@ header a:hover svg path {
 }
 
 .App #lateral-bar-component {
+  display: block;
   position: absolute;
   z-index: -1;
   left: calc(50% + 390px);
@@ -109,5 +110,11 @@ header a:hover svg path {
     width: 1px;
     background-color: #393d46;
     height: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .App #lateral-bar-component {
+    display: none;
   }
 }

@@ -10,7 +10,6 @@ const LateralBar = ({ text }: LateralBarProps) => {
         <p>{text}</p>
         <p>{">"}</p>
       </div>
-      {/* <div className="lateral-bar"></div> */}
     </div>
   );
 };
