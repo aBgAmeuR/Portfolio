@@ -70,6 +70,20 @@
     height: calc(100% + 32px);
   }
 }
+// Retour button
+.back {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  cursor: pointer;
+  background-color: var(--pricipal-bg);
+  padding: 8px 12px;
+  border-radius: 8px;
+  gap: 8px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
 
 @media screen and (max-width: 900px) {
   .ProjetPage #lateral-bar-component {
@@ -93,5 +107,9 @@
 @media screen and (max-width: 520px) {
   .ProjetPage main {
     padding: 0 2rem;
+  }
+  .back {
+    top: 8px;
+    left: 8px;
   }
 }

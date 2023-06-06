@@ -14,6 +14,7 @@ const ProjetsList: React.FC = () => {
         {data
           .filter(item => item.year === year)
           .map((item, index) => (
+            // ProjetComponent est un composant qui est utilisé plusieurs fois
             <ProjetComponent key={index} data={item} />
           ))}
       </React.Fragment>
