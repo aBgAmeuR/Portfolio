@@ -12,7 +12,7 @@
             "figma"
         ],
         "desc": "Une application Web épuré conçu pour optimiser votre vitesse de codage grâce à une interface de saisie intuitive",
-        "github": "https://github.com/aBgAmeuR/Budient",
+        "github": "https://github.com/aBgAmeuR/CodeVif",
         "objectif": "L'objectif principal est d'implémenter une interface utilisateur réactive avec NextJS, optimisée pour une saisie rapide et efficace.",
         "deroulement": "Le développement s'est concentré sur la création d'une interface utilisateur en Next.js, en exploitant ses fonctionnalités SSR pour un chargement rapide des pages. Aucun back-end n'a été utilisé, mettant l'accent sur une architecture front-end autonome et performante."
     },
