@@ -17,6 +17,24 @@
         "deroulement": "Le développement s'est concentré sur la création d'une interface utilisateur en Next.js, en exploitant ses fonctionnalités SSR pour un chargement rapide des pages. Aucun back-end n'a été utilisé, mettant l'accent sur une architecture front-end autonome et performante."
     },
     {
+        "title": "SoftChart",
+        "route": "softchart",
+        "type": "Application web",
+        "year": 2023,
+        "image": "softchart",
+        "color": "#262626",
+        "technologies": [
+            "nextjs",
+            "typescript",
+            "firebase",
+            "figma"
+        ],
+        "desc": "SoftChart est une application Web intuitive et puissante qui vous permet de créer, modifier et exporter des graphiques spécialisés dans l'informatiques.",
+        "github": "https://github.com/aBgAmeuR/SoftChart",
+        "objectif": "L'objectif est de créer une application Web en Next.js pour la génération de graphiques spécialisés, en utilisant TypeScript pour un typage fort et une meilleure maintenabilité.",
+        "deroulement": "Le projet a débuté par la mise en place de l'architecture en Next.js et TypeScript. L'accent a été mis sur la création d'une interface utilisateur intuitive pour la conception de graphiques, tout en optimisant les performances grâce à Firebase."
+    },
+    {
         "title": "Budient",
         "route": "budient",
         "type": "Application web",
