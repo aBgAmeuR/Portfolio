@@ -22,7 +22,6 @@ type Props = {
 function ProjetComponent(props: Props) {
   let navigate = useNavigate();
   function handleClick() {
-    console.log("click");
     navigate("/projet/" + props.data.route);
   }
 
