@@ -1,0 +1,43 @@
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #1c1e1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divCenter {
+  max-width: 828px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 32px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 520px) {
+  .divCenter {
+    padding: 0 2rem;
+  }
+}

@@ -1,0 +1,115 @@
+/* ==================== PROJET PAGE ==================== */
+
+.ProjetPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding-bottom: 32px;
+  height: 100vh;
+}
+
+.ProjetPage main {
+  max-width: 828px;
+  width: 100%;
+  padding: 0 4rem;
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.contentProjet {
+  display: grid;
+  grid-template:
+    "objectif deroulement" min-content
+    "github deroulement" auto
+    "technologies deroulement" 1fr / 1fr 1fr;
+  height: fit-content;
+}
+
+.imageProjetDiv {
+  height: auto;
+  max-height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.ProjetPage #lateral-bar-component {
+  display: block;
+  position: absolute;
+  right: -100px;
+  top: 0;
+  bottom: 0;
+  .text {
+    transform: rotate(90deg) translateX(100%);
+    position: relative;
+    left: -40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    color: #393d46;
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: #393d46;
+    height: calc(100% + 32px);
+  }
+}
+// Retour button
+.back {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  cursor: pointer;
+  background-color: var(--pricipal-bg);
+  padding: 8px 12px;
+  border-radius: 8px;
+  gap: 8px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 900px) {
+  .ProjetPage #lateral-bar-component {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 828px) {
+  .contentProjet {
+    grid-template:
+    "objectif" min-content
+    "deroulement" auto
+    "github" auto
+    "technologies" 1fr / 1fr;
+  }
+  .imageProjetDiv {
+    min-height: 25vh;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .ProjetPage main {
+    padding: 0 2rem;
+  }
+  .back {
+    top: 8px;
+    left: 8px;
+  }
+}

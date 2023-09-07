@@ -1,0 +1,120 @@
+/* ==================== HEADER ==================== */
+
+header .div-center {
+  padding: 0 4rem;
+}
+
+header a:hover svg path {
+  fill: var(--primary-color);
+}
+
+@media screen and (max-width: 520px) {
+  header .div-center {
+    padding: 0 2rem;
+  }
+}
+
+/* ==================== SECTION 1 ==================== */
+
+#section1 {
+  max-width: 828px;
+  width: 100%;
+  padding: 0 4rem;
+}
+
+#section1 .desc {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 40px;
+}
+
+#section1 .btn {
+  margin-top: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+}
+
+#section1 .btn a {
+  margin-right: 0px;
+  transition: 0.4s ease-in-out;
+  text-decoration: none;
+  color: var(--tertiary-color);
+  cursor: pointer;
+}
+
+#section1 .btn a:hover {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 520px) {
+  #section1 {
+    padding: 0 2rem;
+  }
+}
+
+/* ==================== SECTION 2 ==================== */
+
+#section2 {
+  width: 100%;
+}
+
+/* ==================== SECTION 3 ==================== */
+
+#section3 {
+  margin: 32px 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ==================== LATERAL BAR ==================== */
+
+.App {
+  position: relative;
+}
+
+.App #lateral-bar-component {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  left: calc(50% + 390px);
+  top: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  .text {
+    transform: rotate(90deg);
+    position: relative;
+    top: 180px;
+    left: -40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    color: #393d46;
+    p {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: #393d46;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .App #lateral-bar-component {
+    display: none;
+  }
+}

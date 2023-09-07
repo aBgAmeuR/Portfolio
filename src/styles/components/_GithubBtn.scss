@@ -1,0 +1,39 @@
+/* ==================== GITHUB BTN ==================== */
+
+.github-btn {
+  border: 1px solid var(--pricipal-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.github-btn a {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--pricipal-color);
+  padding: 12px 22px;
+}
+
+.github-btn a svg path {
+  fill: var(--primary-color);
+}
+
+.github-btn:before {
+  content: "\00a0";
+  display: block;
+  float: left;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: #303436;
+  transform: translateX(calc(-100% - 1px));
+  transition: .5s;
+}
+
+.github-btn:hover:before {
+  transform: translateX(0);
+}
