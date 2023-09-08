@@ -22,8 +22,7 @@ type Data = {
   deroulement: string;
 };
 
-const ProjetPage = ({ params }: Props) => {
-  const data: Data = require(`../../../assets/data.json`).find((projet: { route: string; }) => projet.route === params.name);
+const ProjetPage = ({ data }: { data: Data }) => {
 
   function image() {
     return (
@@ -105,5 +104,17 @@ const ProjetPage = ({ params }: Props) => {
     </div>
   );
 };
+
+export async function getStaticProps({ params }: Props) {
+  const data: Data = require(`../../../assets/data.json`).find((projet: { route: string; }) => projet.route === params.name);
+  console.log(data);
+  
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
 
 export default ProjetPage;

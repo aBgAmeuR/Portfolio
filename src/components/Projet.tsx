@@ -1,4 +1,3 @@
-// import { useRouter } from "next/router";
 import icons from "../assets/icons.json";
 import Image from "next/image";
 
@@ -19,12 +18,6 @@ type Props = {
 };
 
 function ProjetComponent(props: Props) {
-  // const router = useRouter()
-
-  // const handleClick = (e: { preventDefault: () => void; }) => {
-  //   e.preventDefault()
-  //   router.push("/projet/" + props.data.route)
-  // }
 
   function image() {
     return (
