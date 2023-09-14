@@ -1,29 +1,13 @@
-import GithubBtn from '@/components/GithubBtn';
-import LateralBar from '@/components/LateralBar';
-import { Key } from 'react';
-import icons from "../../../assets/icons.json";
+import { Data } from "@/types/data";
+import { getData } from "@/utils/getData";
+import icons from "@/assets/icons.json";
+import GithubBtn from "@/components/GithubBtn";
+import LateralBar from "@/components/LateralBar";
+import { Key } from "react";
 
-interface Props {
-  params: {
-    name: string;
-  };
-}
-type Data = {
-  title: string;
-  route: string;
-  type: string;
-  year: number;
-  image: string;
-  color: string;
-  technologies: string[];
-  desc: string;
-  github: string;
-  objectif: string;
-  deroulement: string;
-};
-
-const ProjetPage = ({ data }: { data: Data }) => {
-
+const ProjetPage = () => {
+  const data: Data = getData("softchart");
+  
   function image() {
     return (
       <div>
@@ -104,17 +88,5 @@ const ProjetPage = ({ data }: { data: Data }) => {
     </div>
   );
 };
-
-export async function getStaticProps({ params }: Props) {
-  const data: Data = require(`../../../assets/data.json`).find((projet: { route: string; }) => projet.route === params.name);
-  console.log(data);
-  
-
-  return {
-    props: {
-      data,
-    },
-  };
-}
 
 export default ProjetPage;
