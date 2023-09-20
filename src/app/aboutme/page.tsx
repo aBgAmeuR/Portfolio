@@ -33,7 +33,7 @@ export default function Aboutme() {
         <h2>Loisirs 🌲</h2>
         <p>Je pratique la randonnée pédestre. C'est une façon pour moi de me ressourcer de découvrir de nouveaux horizons.</p>
         <h2>Contact 📬</h2>
-        <p>Pour en savoir plus ou pour collaborer, <a href='https://discord.com/users/291253455907979264' target="_blank">contactez-moi.</a></p>
+        <p>Pour en savoir plus ou pour collaborer, <a href='mailto:antoine.josset35@gmail.com' target="_blank">contactez-moi.</a></p>
       </div>
     </main>
   )
