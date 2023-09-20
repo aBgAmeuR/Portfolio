@@ -1,4 +1,4 @@
-import data from '@/assets/data.json';
+import data from '@/content/projects.json';
 import { Data } from '@/types/data';
 
 export const getData = (name: string): Data => {
