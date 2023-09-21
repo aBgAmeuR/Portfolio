@@ -1,39 +1,40 @@
 /* ==================== GITHUB BTN ==================== */
 
 .github-btn {
-  border: 1px solid var(--pricipal-color);
-  position: relative;
-  overflow: hidden;
-}
-
-.github-btn a {
   display: flex;
-  flex-direction: row;
-  gap: 8px;
-  text-decoration: none;
-  align-items: center;
   justify-content: center;
-  color: var(--pricipal-color);
-  padding: 12px 22px;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 15px;
+  background-color: #393d46;
+  outline: 3px #393d46 solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 200ms;
+  text-decoration: none;
 }
 
-.github-btn a svg path {
-  fill: var(--primary-color);
+.github-btn .text {
+  color: white;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 200ms;
 }
 
-.github-btn:before {
-  content: "\00a0";
-  display: block;
-  float: left;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: #303436;
-  transform: translateX(calc(-100% - 1px));
-  transition: .5s;
+.github-btn svg path {
+  transition: 200ms;
 }
 
-.github-btn:hover:before {
-  transform: translateX(0);
+.github-btn:hover {
+  background-color: transparent;
+}
+
+.github-btn:hover .text {
+  color: #393d46;
+}
+
+.github-btn:hover svg path {
+  fill: #393d46;
 }
