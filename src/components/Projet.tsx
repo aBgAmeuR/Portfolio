@@ -18,7 +18,6 @@ type Props = {
 };
 
 function ProjetComponent(props: Props) {
-
   function image() {
     return (
       <div>
