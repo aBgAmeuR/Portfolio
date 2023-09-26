@@ -3,6 +3,7 @@ import ProjetsList from "@/components/Projets";
 import GithubBtn from "@/components/GithubBtn";
 import LateralBar from "@/components/LateralBar";
 import data from "@/content/main.json";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <section id="section1">
           <p className="desc" dangerouslySetInnerHTML={{ __html: data.desc }} />
           <div className="btn">
-            <a href="/about">{data.about}</a>
+            <Link href="/about">{data.about}</Link>
             <svg
               width="33"
               height="16"

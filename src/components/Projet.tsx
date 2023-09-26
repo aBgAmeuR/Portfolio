@@ -1,3 +1,4 @@
+import Link from "next/link";
 import icons from "../assets/icons.json";
 import Image from "next/image";
 
@@ -39,7 +40,7 @@ function ProjetComponent(props: Props) {
   }
 
   return (
-    <a
+    <Link
       className="Projet"
       style={{ background: props.data.color, cursor: "pointer" }}
       href={`/projet/${props.data.route}`}
@@ -60,7 +61,7 @@ function ProjetComponent(props: Props) {
         </ul>
       </div>
       <div className="right">{image()}</div>
-    </a>
+    </Link>
   );
 }
 
