@@ -5,10 +5,12 @@ import GithubBtn from "@/components/GithubBtn";
 import LateralBar from "@/components/LateralBar";
 import { Key } from "react";
 import Link from "next/link";
+import ProjectErrorPage from "@/components/ProjectErrorPage";
 
-const ProjetPage = () => {
-  const data: Data = getData("smash-or-pass");
-  
+async function ProjetPage({ params }: { params: { name: string[] } },) {
+  const data: Data = await getData(params.name[0]);
+  if (!data) return <ProjectErrorPage />
+
   function image() {
     return (
       <div>
