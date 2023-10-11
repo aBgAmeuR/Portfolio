@@ -55,15 +55,12 @@ async function ProjetPage({ params }: { params: { name: string[] } },) {
             </h3>
             <p>{data.deroulement}</p>
           </div>
-          <div
-            style={{
-              gridArea: "github",
-              width: "200px",
-              height: "55px",
-              margin: "16px 0",
-            }}
-          >
+          <div className="btns">
             <GithubBtn link={data.github} text="Code source" />
+            {data.testUrl && (
+              <Link className="btn-test" href={data.testUrl} target="_blank">
+                <p>Tester</p>
+              </Link>)}
           </div>
           <div style={{ gridArea: "technologies" }}>
             <h3 style={{ marginBottom: "2px", color: "white" }}>

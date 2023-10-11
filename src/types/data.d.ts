@@ -6,6 +6,7 @@ export type Data = {
   image: string;
   color: string;
   technologies: string[];
+  testUrl?: string;
   desc: string;
   github: string;
   objectif: string;

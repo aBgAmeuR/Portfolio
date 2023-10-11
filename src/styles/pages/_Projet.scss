@@ -36,7 +36,6 @@
   overflow: hidden;
 }
 
-
 .ProjetPage #lateral-bar-component {
   display: block;
   position: absolute;
@@ -82,7 +81,7 @@
   border-radius: 8px;
   gap: 8px;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 900px) {
@@ -94,10 +93,10 @@
 @media screen and (max-width: 828px) {
   .contentProjet {
     grid-template:
-    "objectif" min-content
-    "deroulement" auto
-    "github" auto
-    "technologies" 1fr / 1fr;
+      "objectif" min-content
+      "deroulement" auto
+      "github" auto
+      "technologies" 1fr / 1fr;
   }
   .imageProjetDiv {
     min-height: 25vh;
@@ -111,5 +110,39 @@
   .back {
     top: 8px;
     left: 8px;
+  }
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0;
+
+  .btn-test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
+    background-color: transparent;
+    outline: 1px #e4e4e7 solid;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: .1s ease-in-out;
+    p {
+      font-weight: 700;
+      font-size: 1em;
+    }
+  }
+
+  .btn-test:hover {
+    background-color: #f4f4f5;
+    color: #18181b;
   }
 }

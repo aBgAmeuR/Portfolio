@@ -11,6 +11,7 @@
             "typescript",
             "figma"
         ],
+        "testUrl": "https://code-vif.vercel.app/",
         "desc": "Une application Web épuré conçu pour optimiser votre vitesse de codage grâce à une interface de saisie intuitive",
         "github": "https://github.com/aBgAmeuR/CodeVif",
         "objectif": "L'objectif principal est d'implémenter une interface utilisateur réactive avec NextJS, optimisée pour une saisie rapide et efficace.",
@@ -29,6 +30,7 @@
             "firebase",
             "figma"
         ],
+        "testUrl": "https://softchart.antoinejosset.fr/",
         "desc": "SoftChart est une application Web intuitive et puissante qui vous permet de créer, modifier et exporter des graphiques spécialisés dans l'informatiques.",
         "github": "https://github.com/aBgAmeuR/SoftChart",
         "objectif": "L'objectif est de créer une application Web en Next.js pour la génération de graphiques spécialisés, en utilisant TypeScript pour un typage fort et une meilleure maintenabilité.",
@@ -70,6 +72,7 @@
             "mysql",
             "jwt"
         ],
+        "testUrl": "https://smash.antoinejosset.fr/api-docs/",
         "desc": "L’API fusionne les concepts de Tier list et de Smash or Pass. Le but de cette API est de permettre à des utilisateurs de créer et gérer des listes (Smash list) et de les partager.",
         "github": "https://github.com/aBgAmeuR/Smash-or-Pass",
         "objectif": "Concevoir une API RESTful en utilisant les technologies telles que Node.js, Express.js, Swagger, et MySQL. Implémenter des fonctionnalités d'authentification et d'autorisation pour restreindre l'accès aux ressources de l'API.",
@@ -87,6 +90,7 @@
             "css",
             "javascript"
         ],
+        "testUrl": "https://abgameur.github.io/Tic-Tac-Toe/",
         "desc": "Ce projet a pour objectif d'améliorer mes compétences en JavaScript en créant un jeu Tic-Tac-Toe avec une interface utilisateur en HTML/CSS et la logique de jeu en JavaScript.",
         "github": "https://github.com/aBgAmeuR/Tic-Tac-Toe",
         "objectif": "Le projet vise à développer les compétences en programmation JavaScript, en utilisant les concepts de base de la logique de programmation tels que les boucles, les conditions, les tableaux et les fonctions.",
