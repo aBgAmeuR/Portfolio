@@ -28,6 +28,7 @@ function ProjetComponent(props: Props) {
           style={{ userSelect: "none" }}
           width={500}
           height={500}
+          priority={true}
         />
       </div>
     );
@@ -42,7 +43,7 @@ function ProjetComponent(props: Props) {
   return (
     <Link
       className="Projet"
-      style={{ background: props.data.color, cursor: "pointer" }}
+      style={{ background: props.data.color, cursor: "pointer", textDecoration: 'none' }}
       href={`/projet/${props.data.route}`}
     >
       <div className="left-top">
