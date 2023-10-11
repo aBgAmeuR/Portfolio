@@ -1,6 +1,6 @@
 # Porfolio
 
-[![App screenshot](https://user-images.githubusercontent.com/113059124/274407002-19b7874f-7606-4e7e-acf4-7016ed50241a.png)]
+![App screenshot](https://user-images.githubusercontent.com/113059124/274407002-19b7874f-7606-4e7e-acf4-7016ed50241a.png)
 
 ## Overview
 
