@@ -6,19 +6,18 @@
   align-items: center;
   padding: 10px 15px;
   gap: 15px;
-  background-color: #0C0A09;
-  outline: 3px #0C0A09 solid;
+  background-color: #0c0a09;
+  outline: 3px #0c0a09 solid;
   outline-offset: -3px;
   border-radius: 6px;
   border: none;
   cursor: pointer;
   text-decoration: none;
-}
-
-.github-btn .text {
-  color: white;
-  font-weight: 700;
-  font-size: 1em;
+  .text {
+    color: white;
+    font-weight: 700;
+    font-size: 1em;
+  }
 }
 
 // .github-btn svg path {
