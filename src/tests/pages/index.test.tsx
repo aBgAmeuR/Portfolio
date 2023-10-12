@@ -1,9 +1,20 @@
 import { render, screen } from "@testing-library/react";
-import Home from "../../app/page";
+import Home from "@/app/page";
 import "@testing-library/jest-dom";
+import data from "@/content/main.json";
 
-describe("Home", () => {
-  it("renders a heading", () => {
+describe("Main page description", () => {
+  it("renders a main description", () => {
+    render(<Home />);
+    
+    const heading = screen.getByRole("mainDesc");
+    
+    expect(heading).toContainHTML(data.desc);
+  });
+});
+
+describe("Main page copyright", () => {
+  it("renders a copyright", () => {
     render(<Home />);
 
     const heading = screen.getByRole("heading", {

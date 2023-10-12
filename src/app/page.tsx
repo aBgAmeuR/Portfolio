@@ -11,7 +11,7 @@ export default function Home() {
       <div className="App">
         <Header />
         <section id="section1">
-          <p className="desc" dangerouslySetInnerHTML={{ __html: data.desc }} />
+          <p className="desc" role="mainDesc" dangerouslySetInnerHTML={{ __html: data.desc }} />
           <div className="btn">
             <Link href="/about">{data.about}</Link>
             <svg
