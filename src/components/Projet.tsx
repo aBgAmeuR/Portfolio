@@ -1,30 +1,19 @@
 import Link from "next/link";
 import icons from "../assets/icons.json";
 import Image from "next/image";
+import { Data } from "@/types/data"
 
 type Props = {
-  data: {
-    title: string;
-    route: string;
-    type: string;
-    year: number;
-    image: string;
-    color: string;
-    technologies: string[];
-    desc: string;
-    github: string;
-    objectif: string;
-    deroulement: string;
-  };
-};
+  data: Data
+}
 
-function ProjetComponent(props: Props) {
+function ProjetComponent({ data }: Props) {
   function image() {
     return (
       <div>
         <Image
-          alt={`${props.data.title} image`}
-          src={`/img/${props.data.image}-min.webp`}
+          alt={`${data.title} image`}
+          src={`/img/${data.image}-min.webp`}
           style={{ userSelect: "none" }}
           width={500}
           height={500}
@@ -43,17 +32,17 @@ function ProjetComponent(props: Props) {
   return (
     <Link
       className="Projet"
-      style={{ background: props.data.color, cursor: "pointer", textDecoration: 'none' }}
-      href={`/projet/${props.data.route}`}
+      style={{ background: data.color, cursor: "pointer", textDecoration: 'none' }}
+      href={`/projet/${data.route}`}
     >
       <div className="left-top">
-        <h4>{props.data.type}</h4>
-        <h2>{props.data.title}</h2>
+        <h4>{data.type}</h4>
+        <h2>{data.title}</h2>
       </div>
       <div className="left-buttom">
         <h4>Technologies</h4>
         <ul>
-          {props.data.technologies.map((tech, index) => (
+          {data.technologies.map((tech, index) => (
             <li
               key={index}
               dangerouslySetInnerHTML={{ __html: getIconCode(tech) }}
