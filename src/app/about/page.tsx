@@ -26,9 +26,10 @@ export default function Aboutme() {
         <h2>{data.competences.titre}</h2>
         <ul>
           <li>• {getIconCode("react")}<p>{data.competences.text[0]}</p></li>
-          <li>• {getIconCode("nodejs")}<p>{data.competences.text[1]}</p></li>
-          <li>• {getIconCode("typescript")}<p>{data.competences.text[2]}</p></li>
-          <li>• {getIconCode("java")}<p>{data.competences.text[3]}</p></li>
+          <li>• {getIconCode("nextjs")}<p>{data.competences.text[1]}</p></li>
+          <li>• {getIconCode("nodejs")}<p>{data.competences.text[2]}</p></li>
+          <li>• {getIconCode("typescript")}<p>{data.competences.text[3]}</p></li>
+          <li>• {getIconCode("java")}<p>{data.competences.text[4]}</p></li>
         </ul>
         <h2>{data.caracterise.titre}</h2>
         <p>{data.caracterise.text}</p>
