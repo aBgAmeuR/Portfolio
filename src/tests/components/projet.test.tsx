@@ -3,7 +3,7 @@ import Projet from "@/components/Projet";
 import "@testing-library/jest-dom";
 import projects from "@/content/projects.json";
 
-describe("Home page", () => {
+describe("Projet component", () => {
   const projet = projects[0];
 
   beforeEach(() => {
