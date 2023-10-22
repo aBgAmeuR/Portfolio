@@ -7,7 +7,7 @@ import { Key } from "react";
 import Link from "next/link";
 import ProjectErrorPage from "@/components/ProjectErrorPage";
 
-async function ProjetPage({ params }: { params: { name: string[] } },) {
+async function ProjetPage({ params }: { params: { name: string[] } }) {
   const data: Data = await getData(params.name[0]);
   if (!data) return <ProjectErrorPage />
 
@@ -83,7 +83,7 @@ async function ProjetPage({ params }: { params: { name: string[] } },) {
             </ul>
           </div>
         </div>
-        <LateralBar text={'Projet'}></LateralBar>
+        {/* <LateralBar text={'Projet'} headerHeight={300}></LateralBar> */}
       </main>
     </div>
   );
