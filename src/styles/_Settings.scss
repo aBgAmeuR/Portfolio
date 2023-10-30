@@ -15,20 +15,20 @@
 }
 
 :root {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-
-  color-scheme: dark;
-  color: #c0c0c0;
-  background-color: #181a1b;
-
   --pricipal-bg: #181a1b;
   --secondary-bg: #1c1e1f;
 
   --pricipal-color: #c0c0c0;
   --secondary-color: #393d46;
   --tertiary-color: #fc4c2d;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: #c0c0c0;
+  background-color: var(--pricipal-bg);
 }
 
 * {
