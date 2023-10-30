@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  padding-bottom: 32px;
   height: 100vh;
 }
 
@@ -25,6 +24,7 @@
     "github deroulement" auto
     "technologies deroulement" 1fr / 1fr 1fr;
   height: fit-content;
+  padding-bottom: 32px;
 }
 
 .imageProjetDiv {

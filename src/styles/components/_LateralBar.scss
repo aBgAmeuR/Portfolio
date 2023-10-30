@@ -4,7 +4,6 @@
   display: block;
   position: absolute;
   left: calc(50% + 390px);
-  top: 80px;
   bottom: 0px;
   margin: 0;
 }
@@ -34,4 +33,10 @@
 .line .box:hover {
   width: 100px;
   left: -50px;
+}
+
+@media screen and (max-width: 900px) {
+  .line {
+    display: none;
+  }
 }

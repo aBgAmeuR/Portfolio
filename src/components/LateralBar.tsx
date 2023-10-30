@@ -1,21 +1,11 @@
-// const LateralBar = ({ text }: LateralBarProps) => {
-//   return (
-//     <div id="lateral-bar-component">
-//       <div className="text">
-//         <p>{"<"}</p>
-//         <p>{text}</p>
-//         <p>{">"}</p>
-//       </div>
-//     </div>
-//   );
-// };
-
 "use client";
+
 import { useRef, useEffect } from "react";
 
 type LateralBarProps = {
   text: String;
   headerHeight: number;
+  topHeight: number;
 };
 
 interface MouseEvent {
@@ -24,7 +14,11 @@ interface MouseEvent {
   pageY: number;
 }
 
-export default function LateralBar({ text, headerHeight }: LateralBarProps) {
+export default function LateralBar({
+  text,
+  headerHeight,
+  topHeight,
+}: LateralBarProps) {
   // Define a reference to an SVGPathElement
   const path = useRef<SVGPathElement>(null);
 
@@ -42,7 +36,7 @@ export default function LateralBar({ text, headerHeight }: LateralBarProps) {
   // Define a function to set the path of the SVG element
   const setPath = (progress: number) => {
     // Get the height of the page minus the height of the header
-    const height = document.body.scrollHeight - headerHeight
+    const height = document.body.scrollHeight - headerHeight;
 
     // Set the "d" attribute of the SVG path element using a quadratic Bézier curve
     path.current?.setAttributeNS(
@@ -71,7 +65,7 @@ export default function LateralBar({ text, headerHeight }: LateralBarProps) {
 
     // Get the bounding rectangle of the SVG path element
     const pathBound = path.current?.getBoundingClientRect();
-    const height = document.body.scrollHeight - headerHeight
+    const height = document.body.scrollHeight - headerHeight;
 
     if (pathBound) {
       y = (pageY - headerHeight) / height;
@@ -117,9 +111,17 @@ export default function LateralBar({ text, headerHeight }: LateralBarProps) {
   };
 
   return (
-    <div className="line">
+    <div className="line" style={{ top: `${topHeight}px` }}>
       <div
-        onMouseEnter={() => { manageMouseEnter() }} onMouseMove={(e) => { manageMouseMove(e) }} onMouseLeave={() => { manageMouseLeave() }}
+        onMouseEnter={() => {
+          manageMouseEnter();
+        }}
+        onMouseMove={(e) => {
+          manageMouseMove(e);
+        }}
+        onMouseLeave={() => {
+          manageMouseLeave();
+        }}
         className="box"
       ></div>
       <svg>

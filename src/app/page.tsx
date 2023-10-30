@@ -38,7 +38,7 @@ export default function Home() {
           />
           <h4>©2023</h4>
         </section>
-        <LateralBar text={"Work"} headerHeight={80}></LateralBar>
+        <LateralBar text={"Work"} headerHeight={80} topHeight={80}></LateralBar>
       </div>
     </main>
   );
