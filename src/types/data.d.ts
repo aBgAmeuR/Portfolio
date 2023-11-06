@@ -1,6 +1,7 @@
 export type Data = {
   title: string;
   route: string;
+  show: boolean;
   type: string;
   year: number;
   image: string;

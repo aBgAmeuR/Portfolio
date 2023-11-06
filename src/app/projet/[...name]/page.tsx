@@ -93,7 +93,7 @@ async function ProjetPage({ params }: { params: { name: string[] } }) {
             </ul>
           </div>
         </div>
-        <LateralBar text={"Projet"} headerHeight={300} topHeight={0}></LateralBar>
+        <LateralBar text={"Projet"} headerHeight={210} topHeight={0}></LateralBar>
       </main>
     </div>
   );

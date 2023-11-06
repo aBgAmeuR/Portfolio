@@ -4,13 +4,14 @@ import data from "../content/projects.json";
 import YearProjets from "../components/YearProjets";
 
 const ProjetsList: React.FC = () => {
+  const projets = data.filter(item => item.show === true);
+  const uniqueYears = Array.from(new Set(projets.map(item => item.year)));
 
   const getProjectList = () => {
-    const uniqueYears = Array.from(new Set(data.map(item => item.year)));
     const elements = uniqueYears.map((year, index) => (
       <React.Fragment key={index}>
         <YearProjets year={year} />
-        {data
+        {projets
           .filter(item => item.year === year)
           .map((item, index) => (
             <ProjetComponent key={index} data={item} />
