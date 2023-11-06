@@ -31,6 +31,14 @@
     "left-top right" 50%
     "left-buttom right" 50% / 200px 1fr;
   margin-bottom: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow, transform 0.3s;
+
+  &:hover {
+    box-shadow: 2px 2px 0px var(--secondary-bg);
+    transform: scale(1.005);
+  }
 }
 
 .Projet .left-top {
