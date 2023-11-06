@@ -38,14 +38,14 @@ header a:hover svg path {
 
 #section1 .btn a {
   margin-right: 0px;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
   text-decoration: none;
   color: var(--tertiary-color);
   cursor: pointer;
 }
 
 #section1 .btn a:hover {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 520px) {
