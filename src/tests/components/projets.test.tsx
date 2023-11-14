@@ -12,8 +12,8 @@ describe("Projets component", () => {
     const heading = screen.getAllByRole("heading", {
       name: /Technologies/i,
     });
-    
-    expect(heading.length).toBe(data.length);
+
+    expect(heading.length).toBe(data.filter((project) => project.show).length);
   });
 
 });
