@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import ProjetsList from "@/components/Projets";
 import GithubBtn from "@/components/GithubBtn";
 import LateralBar from "@/components/LateralBar";
+import { InfoBox } from "@/components/InfoBox";
 import data from "@/content/main.json";
 import Link from "next/link";
 
@@ -10,6 +11,9 @@ export default function Home() {
     <main>
       <div className="App">
         <Header />
+        <InfoBox>
+          <p>Je suis à la recherche d'un stage et d'une alternance, <a href="mailto:antoine.josset35@gmail.com" target='_blank'>contactez-moi</a> !</p>
+        </InfoBox>
         <section id="section1">
           <p className="desc" role="mainDesc" dangerouslySetInnerHTML={{ __html: data.desc }} />
           <div className="btn">

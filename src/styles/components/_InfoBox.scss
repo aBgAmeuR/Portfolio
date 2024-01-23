@@ -1,0 +1,36 @@
+.infoBox {
+  margin: 0 4rem;
+  width: 100%;
+  max-width: calc(828px - 8rem);
+  border: 1px solid var(--secondary-bg);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--pricipal-color);
+  font-weight: bold;
+  // background-color: rgba($color: #4ea8de, $alpha: 1);
+  background-color: #27272a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  & > svg {
+    cursor: pointer;
+  }
+
+  & > div a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
