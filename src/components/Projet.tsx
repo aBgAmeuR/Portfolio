@@ -8,21 +8,6 @@ type Props = {
 }
 
 function ProjetComponent({ data }: Props) {
-  function image() {
-    return (
-      <div>
-        <Image
-          alt={`${data.title} image`}
-          src={`/img/${data.image}-min.webp`}
-          style={{ userSelect: "none" }}
-          width={500}
-          height={500}
-          priority={true}
-        />
-      </div>
-    );
-  }
-
   function getIconCode(iconName: string) {
     const icon = icons.find((icon) => icon.name === iconName);
 
@@ -50,7 +35,16 @@ function ProjetComponent({ data }: Props) {
           ))}
         </ul>
       </div>
-      <div className="right">{image()}</div>
+      <div className="right">
+        <Image
+          alt={`${data.title} image`}
+          src={`/img/${data.image}-min.webp`}
+          style={{ userSelect: "none" }}
+          width={500}
+          height={500}
+          priority={true}
+        />
+      </div>
     </Link>
   );
 }

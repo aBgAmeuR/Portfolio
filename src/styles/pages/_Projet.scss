@@ -25,15 +25,26 @@
     "technologies deroulement" 1fr / 1fr 1fr;
   height: fit-content;
   padding-bottom: 32px;
+
+  &:nth-child(1) {
+    padding-right: 20px;
+  }
 }
 
 .imageProjetDiv {
   height: auto;
   max-height: 33vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
 }
 
 .ProjetPage #lateral-bar-component {
@@ -98,12 +109,18 @@
 }
 
 @media screen and (max-width: 828px) {
+  .ProjetPage {
+    text-align: justify;
+  }
   .contentProjet {
     grid-template:
       "objectif" min-content
       "deroulement" auto
       "github" auto
       "technologies" 1fr / 1fr;
+    &:nth-child(1) {
+      padding-right: 0px;
+    }
   }
   .imageProjetDiv {
     min-height: 25vh;

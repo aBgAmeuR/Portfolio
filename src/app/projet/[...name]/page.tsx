@@ -14,11 +14,7 @@ async function ProjetPage({ params }: { params: { name: string[] } }) {
   function image() {
     return (
       <div>
-        <img
-          alt={`${data.title} image`}
-          src={`/img/${data.image}.webp`}
-          style={{ minHeight: "100%", width: "100%", height: "auto" }}
-        />
+
       </div>
     );
   }
@@ -45,12 +41,17 @@ async function ProjetPage({ params }: { params: { name: string[] } }) {
         </svg>
         <span>Retour</span>
       </Link>
-      <div className="imageProjetDiv">{image()}</div>
+      <div className="imageProjetDiv">
+        <img
+          alt={`${data.title} image`}
+          src={`/img/${data.image}.webp`}
+        />
+      </div>
       <main>
         <h1 style={{ marginTop: "20px", color: "white" }}>{data.title}</h1>
         <p style={{ marginBottom: "8px" }}>{data.desc}</p>
         <div className="contentProjet">
-          <div style={{ gridArea: "objectif", paddingRight: "20px" }}>
+          <div style={{ gridArea: "objectif" }}>
             <h3 style={{ margin: "8px 0", color: "white" }}>
               <strong>Objectif</strong>
             </h3>
