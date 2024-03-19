@@ -12,7 +12,7 @@ export default function Home() {
       <div className="App">
         <Header />
         <InfoBox>
-          <p>Je suis à la recherche d'un stage et d'une alternance, <a href="mailto:antoine.josset35@gmail.com" target='_blank'>contactez-moi</a> !</p>
+          <p>Je suis à la recherche d'une alternance, <a href="mailto:antoine.josset35@gmail.com" target='_blank'>contactez-moi</a> !</p>
         </InfoBox>
         <section id="section1">
           <p className="desc" role="mainDesc" dangerouslySetInnerHTML={{ __html: data.desc }} />
