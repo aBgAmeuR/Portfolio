@@ -1,5 +1,20 @@
 [
   {
+    "title": "Harmony",
+    "route": "harmony",
+    "show": true,
+    "type": "Site web",
+    "year": 2024,
+    "image": "harmony",
+    "color": "#0DB14D",
+    "technologies": ["nextjs", "typescript", "tailwindcss"],
+    "testUrl": "https://harmony2.vercel.app/",
+    "desc": "Harmony est une application Web qui vous donne des statistiques avancées sur votre compte Spotify. L'application analyse votre 'Spotify Data Package', que vous pouvez demander dans les paramètres du compte Spotify.",
+    "github": "https://github.com/aBgAmeuR/Harmony",
+    "objectif": "L'objectif de Harmony est de fournir des statistiques détaillées sur l'utilisation de Spotify, en utilisant les données fournies par l'utilisateur pour générer des graphiques et des tableaux interactifs.",
+    "deroulement": "Le projet a commencé par la création de l'interface utilisateur en Next.js, en utilisant Tailwind CSS pour le design. J'ai ensuite développé les fonctionnalités de l'application, en utilisant les données de l'utilisateur pour générer des statistiques sur l'écoute de musique, les artistes préférés et les genres musicaux."
+  },
+  {
     "title": "Todum",
     "route": "todum",
     "show": true,
@@ -47,7 +62,7 @@
   {
     "title": "Budient",
     "route": "budient",
-    "show": true,
+    "show": false,
     "type": "Application web",
     "year": 2023,
     "image": "budient",

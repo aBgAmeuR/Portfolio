@@ -1,7 +1,16 @@
-.infoBox {
-  margin: 0 4rem;
+.infoBoxContainer {
+  padding: 0 4rem;
   width: 100%;
-  max-width: calc(828px - 8rem);
+  max-width: calc(828px);
+}
+
+@media screen and (max-width: 520px) {
+  .infoBoxContainer {
+    padding: 0 2rem;
+  }
+}
+
+.infoBox {
   border: 1px solid var(--secondary-bg);
   border-radius: 8px;
   padding: 12px;
