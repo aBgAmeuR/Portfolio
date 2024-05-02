@@ -1,28 +1,20 @@
 import { Data } from "@/types/data";
 import { getData } from "@/utils/getData";
-import icons from "@/assets/icons.json";
 import GithubBtn from "@/components/GithubBtn";
 import LateralBar from "@/components/LateralBar";
 import { Key } from "react";
 import Link from "next/link";
 import ProjectErrorPage from "@/components/ProjectErrorPage";
+import { Icons } from "@/components/Icons";
 
 async function ProjetPage({ params }: { params: { name: string[] } }) {
-  const data: Data = await getData(params.name[0]);
+  const data: Data = getData(params.name[0]);
   if (!data) return <ProjectErrorPage />;
 
-  function image() {
-    return (
-      <div>
-
-      </div>
-    );
-  }
-
-  function getIconCode(iconName: string) {
-    const icon = icons.find((icon) => icon.name === iconName);
-    return icon ? icon.code : "";
-  }
+  const Iconstechnologies = data.technologies.map((technology) => {
+    const Icon = Icons[technology];
+    return <Icon key={technology} height={16} width={16} />;
+  });
 
   return (
     <div className="ProjetPage">
@@ -83,14 +75,7 @@ async function ProjetPage({ params }: { params: { name: string[] } }) {
                 listStyle: "none",
               }}
             >
-              {data.technologies.map(
-                (tech: string, index: Key | null | undefined) => (
-                  <li
-                    key={index}
-                    dangerouslySetInnerHTML={{ __html: getIconCode(tech) }}
-                  />
-                )
-              )}
+              {Iconstechnologies}
             </ul>
           </div>
         </div>

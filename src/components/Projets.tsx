@@ -1,6 +1,6 @@
 import React from "react";
 import ProjetComponent from "./Projet";
-import data from "../content/projects.json";
+import data from "../content/projects";
 import YearProjets from "../components/YearProjets";
 
 const ProjetsList: React.FC = () => {

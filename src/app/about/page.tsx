@@ -1,14 +1,9 @@
 import React, { ReactElement } from 'react'
-import icons from "@/assets/icons.json";
-import data from "@/content/about.json";
+import data from "@/content/about";
 import Link from 'next/link';
+import { Icons } from '@/components/Icons';
 
 export default function Aboutme() {
-
-  const getIconCode = (iconName: string): ReactElement => {
-    const icon = icons.find((icon) => icon.name === iconName);
-    return <div dangerouslySetInnerHTML={{ __html: icon ? icon.code : "" }} />
-  }
   return (
     <main id='aboutme'>
       <Link href="/" className="back">
@@ -25,11 +20,11 @@ export default function Aboutme() {
         <p>{data.formation.text}</p>
         <h2>{data.competences.titre}</h2>
         <ul>
-          <li>• {getIconCode("react")}<p>{data.competences.text[0]}</p></li>
-          <li>• {getIconCode("nextjs")}<p>{data.competences.text[1]}</p></li>
-          <li>• {getIconCode("nodejs")}<p>{data.competences.text[2]}</p></li>
-          <li>• {getIconCode("typescript")}<p>{data.competences.text[3]}</p></li>
-          <li>• {getIconCode("java")}<p>{data.competences.text[4]}</p></li>
+          <li>• <Icons.react height={16} width={16} /><p>{data.competences.text[0]}</p></li>
+          <li>• <Icons.nextjs height={16} width={16} /><p>{data.competences.text[1]}</p></li>
+          <li>• <Icons.nodejs height={16} width={16} /><p>{data.competences.text[2]}</p></li>
+          <li>• <Icons.typescript height={16} width={16} /><p>{data.competences.text[3]}</p></li>
+          <li>• <Icons.java height={16} width={16} /><p>{data.competences.text[4]}</p></li>
         </ul>
         <h2>{data.caracterise.titre}</h2>
         <p>{data.caracterise.text}</p>

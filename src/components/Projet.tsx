@@ -1,5 +1,5 @@
 import Link from "next/link";
-import icons from "../assets/icons.json";
+import { Icons } from "@/components/Icons";
 import Image from "next/image";
 import { Data } from "@/types/data"
 
@@ -8,11 +8,10 @@ type Props = {
 }
 
 function ProjetComponent({ data }: Props) {
-  function getIconCode(iconName: string) {
-    const icon = icons.find((icon) => icon.name === iconName);
-
-    return icon ? icon.code : "";
-  }
+  const Iconstechnologies = data.technologies.map((technology) => {
+    const Icon = Icons[technology];
+    return <Icon key={technology} height={16} width={16} />;
+  });
 
   return (
     <Link
@@ -27,12 +26,7 @@ function ProjetComponent({ data }: Props) {
       <div className="left-buttom">
         <h4>Technologies</h4>
         <ul>
-          {data.technologies.map((tech, index) => (
-            <li
-              key={index}
-              dangerouslySetInnerHTML={{ __html: getIconCode(tech) }}
-            />
-          ))}
+          {Iconstechnologies}
         </ul>
       </div>
       <div className="right">

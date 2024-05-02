@@ -3,17 +3,19 @@ import ProjetsList from "@/components/Projets";
 import GithubBtn from "@/components/GithubBtn";
 import LateralBar from "@/components/LateralBar";
 import { InfoBox } from "@/components/InfoBox";
-import data from "@/content/main.json";
+import data from "@/content/main";
 import Link from "next/link";
 
 export default function Home() {
+  const copiright = new Date().getFullYear();
+
   return (
     <main>
       <div className="App">
         <Header />
-        <InfoBox>
+        {/* <InfoBox>
           <p>Je suis à la recherche d'une alternance, <a href="mailto:antoine.josset35@gmail.com" target='_blank'>contactez-moi</a> !</p>
-        </InfoBox>
+        </InfoBox> */}
         <section id="section1">
           <p className="desc" role="mainDesc" dangerouslySetInnerHTML={{ __html: data.desc }} />
           <div className="btn">
@@ -40,7 +42,7 @@ export default function Home() {
             link="https://github.com/aBgAmeuR"
             text={data["github-text"]}
           />
-          <h4>©2023</h4>
+          <h4>{`©${copiright}`}</h4>
         </section>
         <LateralBar text={"Work"} headerHeight={80} topHeight={80}></LateralBar>
       </div>
