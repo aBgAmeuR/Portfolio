@@ -188,6 +188,7 @@ export default function Page() {
                 <IconsList>
                   <IconItem icon="nextjs" />
                   <IconItem icon="typescript" />
+                  <IconItem icon="shadcnUI" />
                   <IconItem icon="tailwindcss" />
                 </IconsList>
                 <ProjectCardLink href="https://github.com/aBgAmeuR/Progiso">

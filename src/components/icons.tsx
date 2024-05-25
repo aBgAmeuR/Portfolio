@@ -65,6 +65,17 @@ export const Icons = {
   react: ReactOriginal,
   firebase: FirebaseOriginal,
   prisma: PrismaOriginal,
+  shadcnUI: (props: LucideProps) => (
+    <svg viewBox="0 0 256 256" {...props}>
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="16"
+        d="m208 128-80 80M192 40 40 192"
+      />
+    </svg>
+  ),
   webassembly: (props: LucideProps) => (
     <svg viewBox="0 0 128 128" {...props}>
       <path
