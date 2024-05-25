@@ -5,16 +5,11 @@ import { Icons } from '../icons';
 import {
   Tooltip,
   TooltipContent,
-  TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
 
 export const IconsList = ({ children }: PropsWithChildren) => {
-  return (
-    <TooltipProvider delayDuration={10}>
-      <div className="flex gap-1">{children}</div>
-    </TooltipProvider>
-  );
+  return <div className="flex gap-1">{children}</div>;
 };
 
 export const IconItem = ({ icon }: { icon: keyof typeof Icons }) => {

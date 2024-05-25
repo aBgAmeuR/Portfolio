@@ -1,10 +1,12 @@
 import '@/styles/globals.css';
 
 import { PropsWithChildren } from 'react';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
 
 import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/ui/toaster';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import { siteConfig } from '@/lib/constant';
 import { fonts } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
@@ -53,8 +55,11 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         )}
       >
         <ThemeProvider attribute="class">
-          <main className="pb-8 pt-32 font-sans">{children}</main>
-          <Toaster />
+          <TooltipProvider delayDuration={10}>
+            <main className="py-8 font-sans sm:pt-16 md:pt-32">{children}</main>
+            <SpeedInsights />
+            <Analytics />
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

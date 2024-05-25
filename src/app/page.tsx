@@ -92,7 +92,7 @@ export default function Page() {
         <SectionProjectsContent>
           <ProjectCard animDelay={0}>
             <ProjectCardImage
-              src="/images/harmony.webp"
+              src="/images/harmony-min.webp"
               width="640"
               height="360"
               alt="Project image"
@@ -120,7 +120,7 @@ export default function Page() {
           </ProjectCard>
           <ProjectCard animDelay={0.1}>
             <ProjectCardImage
-              src="/images/pictoseq.png"
+              src="/images/pictoseq-min.webp"
               width="1920"
               height="993"
               alt="Project image"
@@ -145,7 +145,7 @@ export default function Page() {
           </ProjectCard>
           <ProjectCard animDelay={0.2}>
             <ProjectCardImage
-              src="/images/booktopia.png"
+              src="/images/booktopia-min.webp"
               width="1920"
               height="993"
               alt="Project image"
@@ -171,7 +171,7 @@ export default function Page() {
           </ProjectCard>
           <ProjectCard animDelay={0.3}>
             <ProjectCardImage
-              src="/images/progiso.webp"
+              src="/images/progiso-min.webp"
               width="1920"
               height="993"
               alt="Project image"
