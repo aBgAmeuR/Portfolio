@@ -20,4 +20,5 @@ export const siteConfig = {
   ],
   url: env.APP_URL,
   googleSiteVerificationId: env.GOOGLE_SITE_VERIFICATION_ID || '',
+  animationDuration: 0.5,
 };

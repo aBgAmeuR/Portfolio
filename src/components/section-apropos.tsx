@@ -2,6 +2,8 @@ import React, { PropsWithChildren } from 'react';
 
 import { MotionH3, MotionP } from './framer-motion';
 
+import { siteConfig } from '@/lib/constant';
+
 export const SectionAPropos = ({ children }: PropsWithChildren) => {
   return (
     <section className="container flex flex-col gap-4">{children}</section>
@@ -11,11 +13,11 @@ export const SectionAPropos = ({ children }: PropsWithChildren) => {
 export const SectionAProposTitle = ({ children }: PropsWithChildren) => {
   return (
     <MotionH3
-      initial={{ opacity: 0, scale: 0 }}
+      initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
         type: 'just',
-        duration: 0.2,
+        duration: siteConfig.animationDuration,
         ease: 'easeOut',
       }}
       className="font-mono font-semibold text-neutral-800 dark:text-neutral-200"
@@ -35,11 +37,11 @@ export const SectionAProposText = ({
 }: TSectionAProposTextProps) => {
   return (
     <MotionP
-      initial={{ opacity: 0, x: animDirection === 'left' ? -100 : 100 }}
+      initial={{ opacity: 0, x: animDirection === 'left' ? -10 : 10 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
         type: 'just',
-        duration: 0.2,
+        duration: siteConfig.animationDuration,
         ease: 'easeOut',
       }}
       className="leading-7 text-neutral-500 dark:text-neutral-400"

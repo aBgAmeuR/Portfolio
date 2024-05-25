@@ -5,6 +5,8 @@ import Link, { LinkProps } from 'next/link';
 
 import { MotionArticle } from './framer-motion';
 
+import { siteConfig } from '@/lib/constant';
+
 type TProjectCardProps = PropsWithChildren<{
   animDelay?: number;
 }>;
@@ -16,7 +18,7 @@ export const ProjectCard = ({ animDelay, children }: TProjectCardProps) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{
         type: 'just',
-        duration: 0.2,
+        duration: siteConfig.animationDuration,
         ease: 'easeOut',
         delay: animDelay,
       }}

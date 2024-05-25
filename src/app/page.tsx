@@ -60,7 +60,7 @@ export default function Page() {
             icon="github"
             label="GitHub"
             link="https://github.com/aBgAmeuR"
-            animDelay={0}
+            animDelay={0.1}
           >
             @aBgAmeuR
           </LinkBtn>
@@ -68,7 +68,7 @@ export default function Page() {
             icon="discord"
             label="Discord"
             link="https://discord.com/users/291253455907979264"
-            animDelay={0.1}
+            animDelay={0.2}
           >
             @abgameur
           </LinkBtn>
@@ -76,7 +76,7 @@ export default function Page() {
             icon="spotify"
             label="Spotify"
             link="https://open.spotify.com/user/flps7duvtycn9yto85qwxpqtp"
-            animDelay={0.2}
+            animDelay={0.3}
           >
             Antoine
           </LinkBtn>
@@ -90,7 +90,7 @@ export default function Page() {
           </SectionProjectsDescription>
         </SectionProjectsHeader>
         <SectionProjectsContent>
-          <ProjectCard animDelay={0}>
+          <ProjectCard animDelay={0.1}>
             <ProjectCardImage
               src="/images/harmony-min.webp"
               width="640"
@@ -118,7 +118,7 @@ export default function Page() {
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
-          <ProjectCard animDelay={0.1}>
+          <ProjectCard animDelay={0.2}>
             <ProjectCardImage
               src="/images/pictoseq-min.webp"
               width="1920"
@@ -143,7 +143,7 @@ export default function Page() {
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
-          <ProjectCard animDelay={0.2}>
+          <ProjectCard animDelay={0.3}>
             <ProjectCardImage
               src="/images/booktopia-min.webp"
               width="1920"
@@ -169,7 +169,7 @@ export default function Page() {
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
-          <ProjectCard animDelay={0.3}>
+          <ProjectCard animDelay={0.4}>
             <ProjectCardImage
               src="/images/progiso-min.webp"
               width="1920"

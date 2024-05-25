@@ -4,6 +4,7 @@ import { MotionHeader } from './framer-motion';
 import { Icons } from './icons';
 import { ThemeToggle } from './theme-toggle';
 
+import { siteConfig } from '@/lib/constant';
 import { cn } from '@/lib/utils';
 
 type THeaderProps = PropsWithChildren<{
@@ -13,9 +14,9 @@ type THeaderProps = PropsWithChildren<{
 export const Header = ({ themeToggle = false, children }: THeaderProps) => {
   return (
     <MotionHeader
-      initial={{ y: -100, opacity: 0 }}
+      initial={{ y: -25, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.2, ease: 'easeOut' }}
+      transition={{ duration: siteConfig.animationDuration, ease: 'easeOut' }}
       className="container mb-8 flex items-center justify-between"
     >
       {/* <Icons.logo className="size-16 overflow-visible rounded-full border p-2 text-neutral-500 dark:text-neutral-400" /> */}
