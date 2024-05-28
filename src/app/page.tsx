@@ -1,3 +1,5 @@
+import { ExternalLink } from 'lucide-react';
+
 import { Footer } from '@/components/footer';
 import { Header, HeaderDescription, HeaderHeading } from '@/components/header';
 import { LinkBtn } from '@/components/link-btn';
@@ -8,6 +10,7 @@ import {
   ProjectCardFooter,
   ProjectCardImage,
   ProjectCardLink,
+  ProjectCardLinks,
   ProjectCardTextContent,
   ProjectCardTitle,
 } from '@/components/project-card';
@@ -112,9 +115,22 @@ export default function Page() {
                   <IconItem icon="rust" />
                   <IconItem icon="webassembly" />
                 </IconsList>
-                <ProjectCardLink href="https://github.com/aBgAmeuR/Harmony">
-                  En savoir plus
-                </ProjectCardLink>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://harmony2.vercel.app/"
+                    variant="primary"
+                  >
+                    Tester
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                  <ProjectCardLink
+                    href="https://github.com/aBgAmeuR/Harmony"
+                    variant="secondary"
+                  >
+                    GitHub
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
@@ -137,9 +153,15 @@ export default function Page() {
                 <IconsList>
                   <IconItem icon="java" />
                 </IconsList>
-                <ProjectCardLink href="https://github.com/Matbobe/PictoSeq">
-                  En savoir plus
-                </ProjectCardLink>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://github.com/Matbobe/PictoSeq"
+                    variant="secondary"
+                  >
+                    GitHub
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
@@ -163,9 +185,15 @@ export default function Page() {
                   <IconItem icon="php" />
                   <IconItem icon="symfony" />
                 </IconsList>
-                <ProjectCardLink href="https://github.com/aBgAmeuR/Booktopia">
-                  En savoir plus
-                </ProjectCardLink>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://github.com/aBgAmeuR/Booktopia"
+                    variant="secondary"
+                  >
+                    GitHub
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>
@@ -191,9 +219,22 @@ export default function Page() {
                   <IconItem icon="shadcnUI" />
                   <IconItem icon="tailwindcss" />
                 </IconsList>
-                <ProjectCardLink href="https://github.com/aBgAmeuR/Progiso">
-                  En savoir plus
-                </ProjectCardLink>
+                <ProjectCardLinks>
+                  <ProjectCardLink
+                    href="https://progiso.vercel.app/"
+                    variant="primary"
+                  >
+                    Tester
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                  <ProjectCardLink
+                    href="https://github.com/aBgAmeuR/Progiso"
+                    variant="secondary"
+                  >
+                    GitHub
+                    <ExternalLink className="ml-1 size-3" />
+                  </ProjectCardLink>
+                </ProjectCardLinks>
               </ProjectCardFooter>
             </ProjectCardContent>
           </ProjectCard>

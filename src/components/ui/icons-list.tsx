@@ -18,8 +18,8 @@ export const IconItem = ({ icon }: { icon: keyof typeof Icons }) => {
 
   return (
     <Tooltip>
-      <TooltipTrigger className="flex h-5 items-center">
-        <Icon className="size-4 transition-all duration-100 ease-in-out hover:size-5" />
+      <TooltipTrigger className="group flex h-5 items-center">
+        <Icon className="size-4 transition-all duration-100 ease-in-out group-hover:size-5 group-focus:size-5" />
       </TooltipTrigger>
       <TooltipContent className="bg-neutral-50  text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
         <p>{tooltipContent}</p>
