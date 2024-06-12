@@ -56,4 +56,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  .dots {
+    @apply bg-white bg-[radial-gradient(rgba(229,229,229,0.6)_1px,transparent_1px)] [background-size:24px_24px];
+  }
 }
