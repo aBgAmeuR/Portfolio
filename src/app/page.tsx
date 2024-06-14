@@ -1,5 +1,3 @@
-import { ExternalLink } from 'lucide-react';
-
 import { Footer } from '@/components/footer';
 import { Header, HeaderDescription, HeaderHeading } from '@/components/header';
 import { LinkBtn } from '@/components/link-btn';
@@ -33,7 +31,7 @@ import { StackBadge as SB } from '@/components/ui/stack-badge';
 export default function Page() {
   return (
     <>
-      <Header themeToggle>
+      <Header className="container mb-8" themeToggle withLogo>
         <HeaderHeading>Antoine JOSSET</HeaderHeading>
         <HeaderDescription>
           Développeur full stack basé à Laval, France.
@@ -116,19 +114,8 @@ export default function Page() {
                   <IconItem icon="webassembly" />
                 </IconsList>
                 <ProjectCardLinks>
-                  <ProjectCardLink
-                    href="https://harmony2.vercel.app/"
-                    variant="primary"
-                  >
-                    Tester
-                    <ExternalLink className="ml-1 size-3" />
-                  </ProjectCardLink>
-                  <ProjectCardLink
-                    href="https://github.com/aBgAmeuR/Harmony"
-                    variant="secondary"
-                  >
-                    GitHub
-                    <ExternalLink className="ml-1 size-3" />
+                  <ProjectCardLink href="/p/harmony" variant="secondary">
+                    Voir plus
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>
@@ -154,12 +141,8 @@ export default function Page() {
                   <IconItem icon="java" />
                 </IconsList>
                 <ProjectCardLinks>
-                  <ProjectCardLink
-                    href="https://github.com/Matbobe/PictoSeq"
-                    variant="secondary"
-                  >
-                    GitHub
-                    <ExternalLink className="ml-1 size-3" />
+                  <ProjectCardLink href="/p/pictoseq" variant="secondary">
+                    Voir plus
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>
@@ -186,12 +169,8 @@ export default function Page() {
                   <IconItem icon="symfony" />
                 </IconsList>
                 <ProjectCardLinks>
-                  <ProjectCardLink
-                    href="https://github.com/aBgAmeuR/Booktopia"
-                    variant="secondary"
-                  >
-                    GitHub
-                    <ExternalLink className="ml-1 size-3" />
+                  <ProjectCardLink href="/p/booktopia" variant="secondary">
+                    Voir plus
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>
@@ -220,19 +199,8 @@ export default function Page() {
                   <IconItem icon="tailwindcss" />
                 </IconsList>
                 <ProjectCardLinks>
-                  <ProjectCardLink
-                    href="https://progiso.vercel.app/"
-                    variant="primary"
-                  >
-                    Tester
-                    <ExternalLink className="ml-1 size-3" />
-                  </ProjectCardLink>
-                  <ProjectCardLink
-                    href="https://github.com/aBgAmeuR/Progiso"
-                    variant="secondary"
-                  >
-                    GitHub
-                    <ExternalLink className="ml-1 size-3" />
+                  <ProjectCardLink href="/p/progiso" variant="secondary">
+                    Voir plus
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>

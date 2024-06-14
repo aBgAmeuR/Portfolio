@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 
+import { MotionDiv } from '../framer-motion';
 import { Icons } from '../icons';
 
 import {
@@ -7,14 +8,32 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { siteConfig } from '@/lib/constant';
 import { cn } from '@/lib/utils';
 
 type TIconsListProps = PropsWithChildren<{
   className?: string;
+  anim?: boolean;
 }>;
 
-export const IconsList = ({ className, children }: TIconsListProps) => {
-  return <div className={cn('flex gap-1', className)}>{children}</div>;
+export const IconsList = ({ className, anim, children }: TIconsListProps) => {
+  if (anim) {
+    return (
+      <MotionDiv
+        initial={{ x: 10, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: siteConfig.animationDuration,
+          ease: 'easeOut',
+        }}
+        className={cn('flex gap-1', className)}
+      >
+        {children}
+      </MotionDiv>
+    );
+  } else {
+    return <div className={cn('flex gap-1', className)}>{children}</div>;
+  }
 };
 
 type TIconItemProps = {
