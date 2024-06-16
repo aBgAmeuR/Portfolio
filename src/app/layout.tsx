@@ -56,9 +56,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       >
         <ThemeProvider attribute="class">
           <TooltipProvider delayDuration={10}>
-            <main className="dots py-8 font-sans sm:pt-16 md:pt-32">
-              {children}
-            </main>
+            <main className="py-8 font-sans sm:pt-16 md:pt-32">{children}</main>
             <SpeedInsights />
             <Analytics />
           </TooltipProvider>
