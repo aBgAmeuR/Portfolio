@@ -9,20 +9,28 @@ import { cn } from '@/lib/utils';
 
 type THeaderProps = PropsWithChildren<{
   themeToggle?: boolean;
+  withLogo?: boolean;
+  className?: string;
 }>;
 
-export const Header = ({ themeToggle = false, children }: THeaderProps) => {
+export const Header = ({
+  themeToggle,
+  withLogo,
+  className,
+  children,
+}: THeaderProps) => {
   return (
     <MotionHeader
       initial={{ y: -25, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: siteConfig.animationDuration, ease: 'easeOut' }}
-      className="container mb-8 flex items-center justify-between"
+      className={cn('flex items-center justify-between', className)}
     >
       {/* <Icons.logo className="size-16 overflow-visible rounded-full border p-2 text-neutral-500 dark:text-neutral-400" /> */}
       <div className="flex items-center gap-4">
-        <Icons.logo className="h-auto w-16 overflow-visible text-neutral-700 dark:text-neutral-300" />
-
+        {withLogo ? (
+          <Icons.logo className="h-auto w-16 overflow-visible text-neutral-700 dark:text-neutral-300" />
+        ) : null}
         <div className="flex flex-col">{children}</div>
       </div>
       {themeToggle ? <ThemeToggle /> : null}
