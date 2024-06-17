@@ -25,6 +25,7 @@ export const ImageHeader = ({ src }: TImageHeaderProps) => {
           height="993"
           alt="Project image"
           className="size-full"
+          blurDataURL={src}
         />
       </MotionDiv>
     </WobbleCard>

@@ -37,7 +37,7 @@ export const projectsPagesContent = [
       {
         icon: 'harmony',
         label: 'Harmony',
-        link: 'https://harmony2.vercel.app/',
+        link: 'https://harmony2.vercel.app',
         text: 'Tester',
       },
     ],
@@ -70,7 +70,7 @@ export const projectsPagesContent = [
       {
         icon: 'github',
         label: 'GitHub',
-        link: 'https://github.com/example/PictoSeq',
+        link: 'https://github.com/Matbobe/PictoSeq',
         text: 'Voir le code',
       },
     ],
@@ -107,7 +107,7 @@ export const projectsPagesContent = [
       {
         icon: 'github',
         label: 'GitHub',
-        link: 'https://github.com/example/Booktopia',
+        link: 'https://github.com/aBgAmeuR/Booktopia',
         text: 'Voir le code',
       },
     ],
@@ -144,13 +144,13 @@ export const projectsPagesContent = [
       {
         icon: 'github',
         label: 'GitHub',
-        link: 'https://github.com/example/Progiso',
+        link: 'https://github.com/aBgAmeuR/Progiso',
         text: 'Voir le code',
       },
       {
         icon: 'progiso',
         label: 'Progiso',
-        link: 'https://progiso.example.com',
+        link: 'https://progiso.vercel.app',
         text: 'Tester',
       },
     ],
