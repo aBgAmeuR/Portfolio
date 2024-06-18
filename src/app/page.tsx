@@ -115,7 +115,7 @@ export default function Page() {
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink href="/p/harmony" variant="secondary">
-                    Voir plus
+                    En savoir plus
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>
@@ -142,7 +142,7 @@ export default function Page() {
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink href="/p/pictoseq" variant="secondary">
-                    Voir plus
+                    En savoir plus
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>
@@ -170,7 +170,7 @@ export default function Page() {
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink href="/p/booktopia" variant="secondary">
-                    Voir plus
+                    En savoir plus
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>
@@ -200,7 +200,7 @@ export default function Page() {
                 </IconsList>
                 <ProjectCardLinks>
                   <ProjectCardLink href="/p/progiso" variant="secondary">
-                    Voir plus
+                    En savoir plus
                   </ProjectCardLink>
                 </ProjectCardLinks>
               </ProjectCardFooter>
