@@ -23,7 +23,7 @@ export const Feature = ({ title, delay, children }: TFeatureProps) => {
         ease: 'easeOut',
         delay,
       }}
-      className="text-justify font-mono font-medium text-neutral-800 dark:text-neutral-200"
+      className="font-mono font-medium text-neutral-800 dark:text-neutral-200"
     >
       {`${title}: `}
       <span className="font-sans font-normal leading-7 text-neutral-500 dark:text-neutral-400">

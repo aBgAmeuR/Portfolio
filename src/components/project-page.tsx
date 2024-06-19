@@ -34,7 +34,7 @@ export const ProjectText = ({ children }: PropsWithChildren) => {
   const text = children?.toString().split(' ') || [];
 
   return (
-    <p className="mt-4 text-justify leading-7 text-neutral-500 dark:text-neutral-400">
+    <p className="mt-4 leading-7 text-neutral-500 dark:text-neutral-400">
       {text.map((el, i) => (
         <MotionSpan
           initial={{ opacity: 0 }}
