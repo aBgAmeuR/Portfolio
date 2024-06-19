@@ -56,7 +56,14 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       >
         <ThemeProvider attribute="class">
           <TooltipProvider delayDuration={10}>
-            <main className="py-8 font-sans sm:pt-16 md:pt-32">{children}</main>
+            <main className="py-8 font-sans sm:pt-16 md:pt-32">
+              {children}
+              <div className="fixed left-0 top-0 -z-10 size-full">
+                <div className="relative size-full">
+                  <div className="absolute size-full bg-[radial-gradient(#e5e7eb_0.5px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_20%,transparent_100%)] dark:bg-[radial-gradient(#ffffff33_0.5px,transparent_1px)] dark:[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#fff_20%,transparent_100%)]"></div>
+                </div>
+              </div>
+            </main>
             <SpeedInsights />
             <Analytics />
           </TooltipProvider>
