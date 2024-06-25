@@ -66,12 +66,11 @@ export default function Page() {
             @aBgAmeuR
           </LinkBtn>
           <LinkBtn
-            icon="discord"
-            label="Discord"
-            link="https://discord.com/users/291253455907979264"
+            icon="mail"
+            link="mailto:antoine.josset35@gmail.com"
             animDelay={0.2}
           >
-            @abgameur
+            antoine.josset35@gmail.com
           </LinkBtn>
           <LinkBtn
             icon="spotify"

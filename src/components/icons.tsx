@@ -12,7 +12,7 @@ import {
   PrismaOriginal,
   ReactOriginal,
 } from 'devicons-react';
-import { LucideProps } from 'lucide-react';
+import { LucideProps, Mail } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
@@ -235,4 +235,5 @@ export const Icons = {
       />
     </svg>
   ),
+  mail: (props: LucideProps) => <Mail {...props} />,
 };
