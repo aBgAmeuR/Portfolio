@@ -8,7 +8,7 @@ import { siteConfig } from '@/lib/constant';
 
 type TLinkBtnProps = PropsWithChildren<{
   icon: keyof typeof Icons;
-  label: string;
+  label?: string;
   link: string;
   animDelay?: number;
 }>;
@@ -39,9 +39,11 @@ export const LinkBtn = ({
     >
       <Icon className="size-4" />
       <span className="text-neutral-950 dark:text-neutral-50">{children}</span>
-      <span className="text-xs font-normal text-neutral-500 dark:text-neutral-400">
-        {label}
-      </span>
+      {label && (
+        <span className="text-xs font-normal text-neutral-500 dark:text-neutral-400 ">
+          {label}
+        </span>
+      )}
       <ExternalLink className="size-3 text-neutral-400 dark:text-neutral-500" />
     </MotionA>
   );
