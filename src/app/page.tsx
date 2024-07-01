@@ -40,8 +40,8 @@ export default function Page() {
       <SectionAPropos>
         <SectionAProposTitle>À propos</SectionAProposTitle>
         <SectionAProposText animDirection="left">
-          Je suis passionné de développement Web depuis plusieurs années.
-          Actuellement en 2e année de BUT Informatique à Laval, je
+          Je suis passionné de développement informatique depuis plusieurs
+          années. Actuellement en 2e année de BUT Informatique à Laval, je
           m&apos;immerge pleinement dans chaque projet, en me concentrant sur un
           code propre et des solutions efficaces.
         </SectionAProposText>
