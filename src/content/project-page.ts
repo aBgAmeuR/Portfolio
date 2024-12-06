@@ -37,7 +37,7 @@ export const projectsPagesContent = [
       {
         icon: 'harmony',
         label: 'Harmony',
-        link: 'https://harmony2.vercel.app',
+        link: 'https://harmony.antoinejosset.fr',
         text: 'Tester',
       },
     ],
@@ -150,7 +150,7 @@ export const projectsPagesContent = [
       {
         icon: 'progiso',
         label: 'Progiso',
-        link: 'https://progiso.vercel.app',
+        link: 'https://progiso.antoinejosset.fr',
         text: 'Tester',
       },
     ],
