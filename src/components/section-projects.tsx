@@ -1,9 +1,5 @@
 import { PropsWithChildren } from 'react';
 
-import { MotionDiv } from './framer-motion';
-
-import { siteConfig } from '@/lib/constant';
-
 export const SectionProjects = ({ children }: PropsWithChildren) => {
   return (
     <section className="container mt-12 flex w-full max-w-3xl flex-col gap-4 bg-neutral-100 p-6 md:rounded-2xl dark:bg-neutral-900">
@@ -13,19 +9,7 @@ export const SectionProjects = ({ children }: PropsWithChildren) => {
 };
 
 export const SectionProjectsHeader = ({ children }: PropsWithChildren) => {
-  return (
-    <MotionDiv
-      initial={{ opacity: 0, y: -15 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        type: 'tween',
-        ease: 'easeOut',
-        duration: siteConfig.animationDuration,
-      }}
-    >
-      {children}
-    </MotionDiv>
-  );
+  return <div className="motion-preset-slide-down">{children}</div>;
 };
 
 export const SectionProjectsTitle = ({ children }: PropsWithChildren) => {

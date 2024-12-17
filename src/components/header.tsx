@@ -1,10 +1,8 @@
 import { PropsWithChildren } from 'react';
 
-import { MotionHeader } from './framer-motion';
 import { Icons } from './icons';
 import { ThemeToggle } from './theme-toggle';
 
-import { siteConfig } from '@/lib/constant';
 import { cn } from '@/lib/utils';
 
 type THeaderProps = PropsWithChildren<{
@@ -20,11 +18,11 @@ export const Header = ({
   children,
 }: THeaderProps) => {
   return (
-    <MotionHeader
-      initial={{ y: -25, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: siteConfig.animationDuration, ease: 'easeOut' }}
-      className={cn('flex items-center justify-between', className)}
+    <header
+      className={cn(
+        'motion-preset-slide-down flex items-center justify-between',
+        className
+      )}
     >
       {/* <Icons.logo className="size-16 overflow-visible rounded-full border p-2 text-neutral-500 dark:text-neutral-400" /> */}
       <div className="flex items-center gap-4">
@@ -34,7 +32,7 @@ export const Header = ({
         <div className="flex flex-col">{children}</div>
       </div>
       {themeToggle ? <ThemeToggle /> : null}
-    </MotionHeader>
+    </header>
   );
 };
 

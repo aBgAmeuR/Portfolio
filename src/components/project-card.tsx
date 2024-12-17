@@ -1,36 +1,31 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import Image, { ImageProps } from 'next/image';
 import Link, { LinkProps } from 'next/link';
 
-import { MotionArticle } from './framer-motion';
 import { buttonVariants } from './ui/button';
 import { WobbleCard } from './ui/wobble-card';
 
-import { siteConfig } from '@/lib/constant';
 import { cn } from '@/lib/utils';
 
+const MOTION_DELAY = {
+  1: 'motion-delay-[100ms]',
+  2: 'motion-delay-[200ms]',
+  3: 'motion-delay-[300ms]',
+  4: 'motion-delay-[400ms]',
+} as const;
+
 type TProjectCardProps = PropsWithChildren<{
-  animDelay?: number;
+  animDelay?: keyof typeof MOTION_DELAY;
 }>;
 
-export const ProjectCard = ({ animDelay, children }: TProjectCardProps) => {
+export const ProjectCard = ({ animDelay = 1, children }: TProjectCardProps) => {
   return (
-    <MotionArticle
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        type: 'just',
-        duration: siteConfig.animationDuration,
-        ease: 'easeOut',
-        delay: animDelay,
-      }}
-      className=""
-    >
+    <article className={cn('motion-preset-expand', MOTION_DELAY[animDelay])}>
       <WobbleCard containerClassName="flex w-full flex-col gap-3 rounded-2xl border border-neutral-200 bg-neutral-50 p-3 dark:border-neutral-700 dark:bg-neutral-800">
         {children}
       </WobbleCard>
-    </MotionArticle>
+    </article>
   );
 };
 

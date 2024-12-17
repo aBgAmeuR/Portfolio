@@ -42,9 +42,8 @@ export default function Page({ params }: TPageProps) {
             icon={link.icon}
             label={link.label}
             link={link.link}
-            animDelay={0.1 * (i + 1)}
+            animDelay={(i + 1) as 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9}
           >
-            {' '}
             {link.text}
           </LinkBtn>
         ))}
@@ -52,7 +51,11 @@ export default function Page({ params }: TPageProps) {
       <ProjectSubTitle>Fonctionnalités</ProjectSubTitle>
       <SectionFeatures>
         {project.features.map((feature, i) => (
-          <Feature key={i} title={feature.title} delay={0.1 * (i + 1)}>
+          <Feature
+            key={i}
+            title={feature.title}
+            delay={(i + 1) as 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9}
+          >
             {feature.desc}
           </Feature>
         ))}

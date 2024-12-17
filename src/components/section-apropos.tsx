@@ -1,8 +1,6 @@
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 
-import { MotionH3, MotionP } from './framer-motion';
-
-import { siteConfig } from '@/lib/constant';
+import { cn } from '@/lib/utils';
 
 export const SectionAPropos = ({ children }: PropsWithChildren) => {
   return (
@@ -12,18 +10,9 @@ export const SectionAPropos = ({ children }: PropsWithChildren) => {
 
 export const SectionAProposTitle = ({ children }: PropsWithChildren) => {
   return (
-    <MotionH3
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        type: 'just',
-        duration: siteConfig.animationDuration,
-        ease: 'easeOut',
-      }}
-      className="font-mono font-semibold text-neutral-800 dark:text-neutral-200"
-    >
+    <h3 className="motion-preset-slide-left-sm motion-delay-[100ms] font-mono font-semibold text-neutral-800 dark:text-neutral-200">
       {children}
-    </MotionH3>
+    </h3>
   );
 };
 
@@ -36,18 +25,16 @@ export const SectionAProposText = ({
   children,
 }: TSectionAProposTextProps) => {
   return (
-    <MotionP
-      initial={{ opacity: 0, x: animDirection === 'left' ? -10 : 10 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{
-        type: 'just',
-        duration: siteConfig.animationDuration,
-        ease: 'easeOut',
-      }}
-      className="leading-7 text-neutral-500 dark:text-neutral-400"
+    <p
+      className={cn(
+        'leading-7 text-neutral-500 dark:text-neutral-400',
+        animDirection === 'left'
+          ? 'motion-preset-slide-left-sm'
+          : 'motion-preset-slide-right-sm'
+      )}
     >
       {children}
-    </MotionP>
+    </p>
   );
 };
 
