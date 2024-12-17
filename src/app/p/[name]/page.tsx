@@ -15,12 +15,13 @@ import { IconItem, IconsList } from '@/components/ui/icons-list';
 import { projectsPagesContent } from '@/content/project-page';
 
 type TPageProps = {
-  params: {
+  params: Promise<{
     name?: string;
-  };
+  }>;
 };
 
-export default function Page({ params }: TPageProps) {
+export default async function Page(props: TPageProps) {
+  const params = await props.params;
   const project = projectsPagesContent.find(
     (p) => p.title.toLocaleLowerCase() == params.name?.toLocaleLowerCase()
   );
