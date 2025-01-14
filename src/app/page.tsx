@@ -69,14 +69,14 @@ export default function Page() {
       <Header className="container mb-8" themeToggle withLogo>
         <HeaderHeading>Antoine JOSSET</HeaderHeading>
         <HeaderDescription>
-          Développeur full stack basé à Laval, France.
+          Développeur full stack basé à Rennes, France.
         </HeaderDescription>
       </Header>
       <SectionAPropos>
         <SectionAProposTitle>À propos</SectionAProposTitle>
         <SectionAProposText animDirection="left">
           Je suis passionné de développement informatique depuis plusieurs
-          années. Actuellement en 2e année de BUT Informatique à Laval, je
+          années. Actuellement en 3e année de BUT Informatique à Laval, je
           m&apos;immerge pleinement dans chaque projet, en me concentrant sur un
           code propre et des solutions efficaces.
         </SectionAProposText>

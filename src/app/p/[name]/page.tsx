@@ -14,16 +14,24 @@ import { Feature, SectionFeatures } from '@/components/section-features';
 import { IconItem, IconsList } from '@/components/ui/icons-list';
 import { projectsPagesContent } from '@/content/project-page';
 
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  return projectsPagesContent.map((project) => ({
+    name: project.title.toLocaleLowerCase(),
+  }));
+}
+
 type TPageProps = {
   params: Promise<{
     name?: string;
   }>;
 };
 
-export default async function Page(props: TPageProps) {
-  const params = await props.params;
+export default async function Page({ params }: TPageProps) {
+  const { name } = await params;
   const project = projectsPagesContent.find(
-    (p) => p.title.toLocaleLowerCase() == params.name?.toLocaleLowerCase()
+    (p) => p.title.toLocaleLowerCase() == name?.toLocaleLowerCase()
   );
 
   if (!project) notFound();
