@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, VideoHTMLAttributes } from 'react';
 import Image, { ImageProps } from 'next/image';
 import Link, { LinkProps } from 'next/link';
 
@@ -33,6 +33,16 @@ export const ProjectCardImage = (props: ImageProps) => {
   return (
     <div className="h-32 w-full overflow-hidden rounded-xl object-fill">
       <Image {...props} />
+    </div>
+  );
+};
+
+export const ProjectCardVideo = (
+  props: VideoHTMLAttributes<HTMLVideoElement>
+) => {
+  return (
+    <div className="h-32 w-full overflow-hidden rounded-xl object-fill">
+      <video {...props} />
     </div>
   );
 };
@@ -72,6 +82,7 @@ export const ProjectCardLinks = ({ children }: PropsWithChildren) => {
 type TProjectCardLinkProps = LinkProps &
   PropsWithChildren & {
     variant?: 'primary' | 'secondary';
+    target?: string;
   };
 
 export const ProjectCardLink = (props: TProjectCardLinkProps) => {

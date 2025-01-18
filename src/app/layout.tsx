@@ -47,23 +47,33 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-screen bg-neutral-50 font-sans antialiased dark:bg-neutral-950',
+          'relative min-h-screen bg-neutral-50 font-sans antialiased dark:bg-neutral-950',
           fonts
         )}
       >
         <ThemeProvider attribute="class">
           <TooltipProvider delayDuration={10}>
-            <main className="py-8 font-sans sm:pt-16 md:pt-32">
+            <main className="relative z-10 py-8 font-sans sm:pt-16 md:pt-32">
               {children}
-              <div className="fixed left-0 top-0 -z-10 size-full">
+              {/* <div className="fixed left-0 top-0 -z-10 size-full">
                 <div className="relative size-full">
                   <div className="absolute size-full bg-[radial-gradient(#e5e7eb_0.5px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_20%,transparent_100%)] dark:bg-[radial-gradient(#ffffff33_0.5px,transparent_1px)] dark:[mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#fff_20%,transparent_100%)]"></div>
                 </div>
-              </div>
+              </div> */}
             </main>
+            {/* <div className="absolute inset-0 flex-none opacity-10">
+              <div
+                className="absolute inset-0 bg-left-top bg-repeat"
+                style={{
+                  backgroundSize: '22.05px auto',
+                  backgroundImage:
+                    'url(https://framerusercontent.com/images/zkZcqLYKrbf3IcoLGmkQF4odXvY.svg)',
+                }}
+              ></div>
+            </div> */}
             <SpeedInsights />
             <Analytics />
           </TooltipProvider>
