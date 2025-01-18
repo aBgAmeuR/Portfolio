@@ -36,7 +36,7 @@ const PROJECTS = [
   {
     title: 'Harmony',
     description:
-      'Application Web qui vous donne des statistiques avancées sur votre compte Spotify. Données à partir du package Spotify.',
+      'Application Web qui vous donne des statistiques avancées sur votre compte Spotify.',
     image: '/images/harmony-min.webp',
     video: '/videos/harmony.webm',
     icons: ['nextjs', 'typescript', 'shadcnUI', 'tailwindcss', 'spotify'],
@@ -77,31 +77,40 @@ const PROJECTS = [
 export default function Page() {
   return (
     <>
-      <Header className="container mb-8" themeToggle withLogo>
+      <Header
+        className="bg-background container relative w-full max-w-3xl px-16 py-8 sm:pt-16"
+        themeToggle
+        withLogo
+      >
+        <div className="bg-border absolute inset-y-0 right-0 w-px flex-none self-stretch overflow-hidden"></div>
+        <div className="bg-border absolute inset-y-0 left-0 w-px flex-none self-stretch overflow-hidden"></div>
         <HeaderHeading>Antoine JOSSET</HeaderHeading>
         <HeaderDescription>
           Développeur full stack basé à Rennes, France.
         </HeaderDescription>
       </Header>
       <SectionAPropos>
-        <SectionAProposTitle>À propos</SectionAProposTitle>
-        <SectionAProposText animDirection="left">
-          Je suis passionné de développement informatique depuis plusieurs
-          années. Actuellement en 3e année de BUT Informatique à Laval, je
-          m&apos;immerge pleinement dans chaque projet, en me concentrant sur un
-          code propre et des solutions efficaces.
-        </SectionAProposText>
-        <SectionAProposText animDirection="right">
-          Je développe mes compétences en développement logiciel grâce aux
-          technologies <SB icon="typescript">TypeScript</SB> telles que{' '}
-          <SB icon="nextjs">Next.js</SB> et <SB icon="nodejs">Node.js</SB>,
-          ainsi qu&apos;aux outils de front-end comme{' '}
-          <SB icon="tailwindcss">Tailwind</SB>. Pour le back-end, je me
-          spécialise en <SB icon="java">Java</SB>, <SB icon="rust">Rust</SB> et{' '}
-          <SB icon="symfony">Symfony</SB>. J&apos;utilise également{' '}
-          <SB icon="git">Git</SB> et <SB icon="sql">Sql</SB> pour la gestion de
-          versions et des bases de données.
-        </SectionAProposText>
+        <div className="bg-border absolute left-1/2 top-0 z-20 h-px w-screen flex-none -translate-x-1/2 overflow-hidden"></div>
+        <div className="bg-background flex flex-col gap-4 px-16 py-8">
+          <SectionAProposTitle>À propos</SectionAProposTitle>
+          <SectionAProposText animDirection="left">
+            Je suis passionné de développement informatique depuis plusieurs
+            années. Actuellement en 3e année de BUT Informatique à Laval, je
+            m&apos;immerge pleinement dans chaque projet, en me concentrant sur
+            un code propre et des solutions efficaces.
+          </SectionAProposText>
+          <SectionAProposText animDirection="right">
+            Je développe mes compétences en développement logiciel grâce aux
+            technologies <SB icon="typescript">TypeScript</SB> telles que{' '}
+            <SB icon="nextjs">Next.js</SB> et <SB icon="nodejs">Node.js</SB>,
+            ainsi qu&apos;aux outils de front-end comme{' '}
+            <SB icon="tailwindcss">Tailwind</SB>. Pour le back-end, je me
+            spécialise en <SB icon="java">Java</SB>, <SB icon="rust">Rust</SB>{' '}
+            et <SB icon="symfony">Symfony</SB>. J&apos;utilise également{' '}
+            <SB icon="git">Git</SB> et <SB icon="sql">Sql</SB> pour la gestion
+            de versions et des bases de données.
+          </SectionAProposText>
+        </div>
         <SectionAProposLinks>
           <LinkBtn
             icon="github"

@@ -2,8 +2,11 @@ import { PropsWithChildren } from 'react';
 
 export const SectionProjects = ({ children }: PropsWithChildren) => {
   return (
-    <section className="container mt-12 flex w-full max-w-3xl flex-col gap-4 bg-neutral-100 p-6 md:rounded-2xl dark:bg-neutral-900">
+    <section className="bg-background container relative flex w-full max-w-3xl flex-col gap-4 px-16 py-6">
       {children}
+      <div className="bg-border absolute inset-y-0 right-0 w-px flex-none self-stretch overflow-hidden"></div>
+      <div className="bg-border absolute inset-y-0 left-0 w-px flex-none self-stretch overflow-hidden"></div>
+      <div className="bg-border absolute bottom-0 left-1/2 z-20 h-px w-screen flex-none -translate-x-1/2 overflow-hidden"></div>
     </section>
   );
 };

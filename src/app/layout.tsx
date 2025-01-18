@@ -56,7 +56,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       >
         <ThemeProvider attribute="class">
           <TooltipProvider delayDuration={10}>
-            <main className="relative z-10 py-8 font-sans sm:pt-16 md:pt-32">
+            <main className="relative z-10 mx-4 pb-8 md:mx-8">
               {children}
               {/* <div className="fixed left-0 top-0 -z-10 size-full">
                 <div className="relative size-full">
@@ -64,7 +64,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                 </div>
               </div> */}
             </main>
-            {/* <div className="absolute inset-0 flex-none opacity-10">
+            <div className="absolute inset-0 flex-none opacity-10">
               <div
                 className="absolute inset-0 bg-left-top bg-repeat"
                 style={{
@@ -73,7 +73,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
                     'url(https://framerusercontent.com/images/zkZcqLYKrbf3IcoLGmkQF4odXvY.svg)',
                 }}
               ></div>
-            </div> */}
+            </div>
             <SpeedInsights />
             <Analytics />
           </TooltipProvider>
