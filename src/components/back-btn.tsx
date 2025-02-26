@@ -10,8 +10,8 @@ export const BackBtn = ({ children }: PropsWithChildren) => {
   const router = useRouter();
 
   return (
-    <Button onClick={router.back} variant="link" className="pl-0">
-      <ArrowLeft className="mr-2 size-4" /> {children}
+    <Button onClick={router.back} variant="link" className="justify-start pl-0">
+      <ArrowLeft className="size-4" /> {children}
     </Button>
   );
 };
