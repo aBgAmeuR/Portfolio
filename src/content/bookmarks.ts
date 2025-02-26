@@ -16,7 +16,7 @@ export type Bookmark = {
   isNew?: boolean;
 };
 
-export const bookmarks = [
+export const bookmarks: Bookmark[] = [
   {
     title: 'pqoqubbw/icons',
     description: 'beautifully crafted animated icons.',
@@ -129,4 +129,4 @@ export const bookmarks = [
     link: 'https://alignui.com/',
     category: 'components',
   },
-] satisfies Bookmark[];
+];
