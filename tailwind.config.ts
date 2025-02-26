@@ -1,4 +1,7 @@
+import tailwindcssTypography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
+import tailwindcssAnimate from 'tailwindcss-animate';
+import * as tailwindcssMotion from 'tailwindcss-motion';
 
 const config = {
   darkMode: ['class'],
@@ -15,6 +18,7 @@ const config = {
       mono: ['var(--font-geist-sans)'],
     },
     screens: {
+      xs: '475px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -85,11 +89,7 @@ const config = {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-animate'),
-    require('@tailwindcss/typography'),
-    require('tailwindcss-motion'),
-  ],
+  plugins: [tailwindcssAnimate, tailwindcssTypography, tailwindcssMotion],
 } satisfies Config;
 
 export default config;
