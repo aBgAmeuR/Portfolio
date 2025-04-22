@@ -1,5 +1,4 @@
 import { ExternalLink } from 'lucide-react';
-import Link from 'next/link';
 
 import { Icons } from './icons';
 
@@ -10,14 +9,18 @@ export const Footer = () => {
     <footer className="motion-preset-slide-up container mt-12 flex flex-col items-center gap-16 leading-7 text-neutral-500 dark:text-neutral-400">
       <div className="flex flex-col items-center gap-2">
         <Button className="w-min rounded-xl" asChild>
-          <a href="https://github.com/aBgAmeuR" target="_blank">
+          <a
+            href="https://github.com/aBgAmeuR"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Icons.github className="mr-2 size-4" /> Voir plus de projets{' '}
             <ExternalLink className="ml-2 size-4" />
           </a>
         </Button>
-        <Button variant="link" asChild>
+        {/* <Button variant="link" asChild>
           <Link href="/bookmarks">Mes bookmarks</Link>
-        </Button>
+        </Button> */}
       </div>
 
       <span>
