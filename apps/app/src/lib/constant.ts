@@ -1,5 +1,3 @@
-import { env } from '@/env.mjs';
-
 export const siteConfig = {
   title: 'Antoine JOSSET - Portfolio',
   description:
@@ -18,7 +16,7 @@ export const siteConfig = {
     'web',
     'logiciel',
   ],
-  url: env.APP_URL,
-  googleSiteVerificationId: env.GOOGLE_SITE_VERIFICATION_ID || '',
+  url: process.env.APP_URL,
+  googleSiteVerificationId: process.env.GOOGLE_SITE_VERIFICATION_ID || '',
   animationDuration: 0.5,
 };
