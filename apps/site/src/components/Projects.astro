@@ -1,13 +1,15 @@
 ---
 import ProjectCard from './common/ProjectCard.astro';
 import SectionTitle from './SectionTitle.astro';
+import pictoseqImage from '../assets/pictoseq.webp';
+import booktopiaImage from '../assets/booktopia.webp';
+import progisoImage from '../assets/progiso.webp';
 
 const projects = [
   {
     title: "Harmony",
     description: "Application Web qui vous donne des statistiques avancées sur votre compte Spotify.",
     image: "/videos/harmony.webm",
-    isVideo: true,
     technologies: [
       { name: "Next.js", icon: "next" },
       { name: "TypeScript", icon: "typescript" },
@@ -21,7 +23,8 @@ const projects = [
   {
     title: "PictoSeq",
     description: "Application qui facilite la création de séquentiels de pictogrammes pour les personnes en situation de handicap.",
-    image: "/images/pictoseq-min.webp",
+    image: pictoseqImage,
+    imageAlt: "PictoSeq image",
     technologies: [
       { name: "Java", icon: "java" }
     ],
@@ -30,7 +33,8 @@ const projects = [
   {
     title: "Booktopia",
     description: "Site e-commerce de livres, permet de rechercher, ajouter à une liste de souhaits, acheter des livres et gérer le catalogue.",
-    image: "/images/booktopia-min.webp",
+    image: booktopiaImage,
+    imageAlt: "Booktopia image",
     technologies: [
       { name: "PHP", icon: "php" },
       { name: "Symfony", icon: "symfony" }
@@ -40,7 +44,8 @@ const projects = [
   {
     title: "Progiso",
     description: "Plateforme de gestion de projet conçue pour simplifier la gestion des projets des petites et moyennes équipes.",
-    image: "/images/progiso-min.webp",
+    image: progisoImage,
+    imageAlt: "Progiso image",
     technologies: [
       { name: "Next.js", icon: "next" },
       { name: "TypeScript", icon: "typescript" },
@@ -66,9 +71,13 @@ const projects = [
     class="grid grid-cols-1 gap-4 sm:grid-cols-2"
     role="grid"
     aria-label="Liste des projets"
+    aria-rowcount="2"
+    aria-colcount="2"
   >
-    {projects.map((project) => (
-      <ProjectCard {...project} />
+    {projects.map((project, index) => (
+      <div role="gridcell" aria-rowindex={Math.floor(index / 2) + 1} aria-colindex={(index % 2) + 1}>
+        <ProjectCard {...project} />
+      </div>
     ))}
   </div>
 </section>

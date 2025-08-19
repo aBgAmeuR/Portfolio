@@ -1,13 +1,13 @@
 ---
-import TechnologyTooltip from './TechnologyTooltip.astro';
-import ProjectButton from './ProjectButton.astro';
+import TechnologyTooltip from "./TechnologyTooltip.astro";
+import ProjectButton from "./ProjectButton.astro";
+import { Image } from 'astro:assets';
 
 export interface Props {
   title: string;
   description: string;
-  image: string;
+  image: ImageMetadata | string;
   imageAlt?: string;
-  isVideo?: boolean;
   technologies: Array<{
     name: string;
     icon: string;
@@ -16,59 +16,87 @@ export interface Props {
   codeUrl?: string;
 }
 
-const { title, description, image, imageAlt = "Project image", isVideo = false, technologies, demoUrl, codeUrl } = Astro.props;
+const {
+  title,
+  description,
+  image,
+  imageAlt = "Project image",
+  technologies,
+  demoUrl,
+  codeUrl,
+} = Astro.props;
 ---
 
-<article class="group" aria-labelledby={`project-title-${title.replace(/\s+/g, '-').toLowerCase()}`}>
+<article
+  class="group"
+  role="article"
+  aria-labelledby={`project-title-${title.replace(/\s+/g, "-").toLowerCase()}`}
+  aria-describedby={`project-desc-${title.replace(/\s+/g, "-").toLowerCase()}`}
+>
   <div
-    class="flex w-full flex-col gap-2 rounded-2xl border border-border bg-card p-3">
+    class="flex w-full flex-col gap-2 rounded-2xl border border-border bg-card p-3"
+  >
     <div class="w-full overflow-hidden rounded-xl aspect-video object-fill">
-      {isVideo ? (
-        <video 
-          src={image} 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          width="1920" 
-          height="993"
-          aria-label={`Démonstration vidéo du projet ${title}`}
-          title={`Démonstration du projet ${title}`}
-        ></video>
-      ) : (
-        <img 
-          src={image} 
-          width="1904" 
-          height="992" 
-          alt={imageAlt} 
-          class="size-full object-cover"
-          loading="lazy"
-        />
-      )}
+      {
+        typeof image === 'string' ? (
+          <video
+            src={image}
+            autoplay
+            loop
+            muted
+            playsinline
+            width="1920"
+            height="993"
+            aria-label={`Démonstration vidéo du projet ${title}`}
+            title={`Démonstration du projet ${title}`}
+          />
+        ) : (
+          <Image src={image} alt={imageAlt} class="size-full object-cover" />
+        )
+      }
     </div>
     <div class="flex flex-1 flex-col justify-between gap-3">
       <div>
-        <h4 
-          id={`project-title-${title.replace(/\s+/g, '-').toLowerCase()}`}
+        <h4
+          id={`project-title-${title.replace(/\s+/g, "-").toLowerCase()}`}
           class="text-base font-medium text-primary"
         >
           {title}
         </h4>
-        <p class="text-sm text-muted">{description}</p>
+        <p
+          id={`project-desc-${title.replace(/\s+/g, "-").toLowerCase()}`}
+          class="text-sm text-muted"
+        >
+          {description}
+        </p>
       </div>
       <div class="flex items-center justify-between">
-        <div class="flex items-center gap-1" role="group" aria-label={`Technologies utilisées pour ${title}`}>
-          {technologies.map((tech) => (
-            <TechnologyTooltip name={tech.name} icon={tech.icon} />
-          ))}
+        <div
+          class="flex items-center gap-1"
+          role="group"
+          aria-label={`Technologies utilisées pour ${title}`}
+        >
+          {
+            technologies.map((tech) => (
+              <TechnologyTooltip name={tech.name} icon={tech.icon} />
+            ))
+          }
         </div>
-        <div class="flex items-center gap-1" role="group" aria-label={`Liens du projet ${title}`}>
-          {demoUrl && (
-            <ProjectButton href={demoUrl} variant="demo" text="Tester" />
-          )}
-          {codeUrl && (
-            <ProjectButton href={codeUrl} variant="code" text="Code" />
-          )}
+        <div
+          class="flex items-center gap-1"
+          role="group"
+          aria-label={`Liens du projet ${title}`}
+        >
+          {
+            demoUrl && (
+              <ProjectButton href={demoUrl} variant="demo" text="Tester" />
+            )
+          }
+          {
+            codeUrl && (
+              <ProjectButton href={codeUrl} variant="code" text="Code" />
+            )
+          }
         </div>
       </div>
     </div>

@@ -11,14 +11,13 @@ const { name, icon } = Astro.props;
 
 <div
   class="tooltip scale-100 hover:scale-105 transition-all duration-100 relative group"
-  role="tooltip"
   tabindex="0"
-  aria-describedby={`tooltip-${name.replace(/\s+/g, "-").toLowerCase()}`}
+  aria-label={`Technologie ${name}`}
+  title={name}
 >
   <span
-    id={`tooltip-${name.replace(/\s+/g, "-").toLowerCase()}`}
     class="tooltiptext"
-    role="tooltip"
+    aria-hidden="true"
   >
     {name}
   </span>
