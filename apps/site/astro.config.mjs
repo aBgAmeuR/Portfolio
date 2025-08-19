@@ -4,10 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 import icon from 'astro-icon';
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from 'astro-robots-txt';
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://antoinejosset.fr',
+
   integrations: [icon(), sitemap({
     filter: (page) => {
       const excludePatterns = ['404', '500', 'dev', 'test'];
@@ -17,10 +19,12 @@ export default defineConfig({
     priority: 0.7,
     lastmod: new Date()
   }), robotsTxt()],
+
   vite: {
     // @ts-ignore - tailwindcss is not typed
     plugins: [tailwindcss()],
   },
+
   experimental: {
     fonts: [{
       provider: fontProviders.google(),
@@ -30,7 +34,6 @@ export default defineConfig({
       subsets: ["latin"],
     }]
   },
-  image: {
-    service: passthroughImageService(),
-  },
+
+  adapter: cloudflare(),
 });
