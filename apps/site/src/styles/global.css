@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+	--radius: 0.625rem;
+	--background: oklch(0.99 0.00 0);
+	--foreground: oklch(0.97 0.00 0);
+	--card: oklch(0.99 0.00 0);
+	--primary: oklch(0.27 0.00 0);
+	--secondary: oklch(0.63 0.17 149);
+	--muted: oklch(0.56 0.00 0);
+	--border: oklch(0.92 0.00 0);
+	--input: oklch(0.92 0.004 286.32);
+	--ring: oklch(0.20 0.00 0);
+}
+
+.dark {
+	--background: oklch(0.14 0.00 0);
+	--foreground: oklch(0.20 0.00 0);
+	--card: oklch(0.27 0.00 0);
+	--primary: oklch(0.92 0.00 0);
+	--secondary: oklch(0.53 0.14 150);
+	--muted: oklch(0.72 0.00 0);
+	--border: oklch(0.37 0.00 0);
+	--input: oklch(1 0 0 / 15%);
+	--ring: oklch(0.97 0.00 0);
+}
+
+@theme inline {
+	--color-background: var(--background);
+    --color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--foreground);
+	--color-secondary: var(--secondary);
+	--color-muted: var(--muted);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: var(--color-green-600);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 50%;
+    font-size: 14px;
+	transform: translateX(-50%);
+	padding-inline: 4px;
+	text-wrap: nowrap;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--color-green-600) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

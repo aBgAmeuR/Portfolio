@@ -1,0 +1,15 @@
+---
+import { Icon } from 'astro-icon/components'
+
+export interface Props {
+  name: string;
+  icon: string;
+}
+
+const { name, icon } = Astro.props;
+---
+
+<div class="tooltip scale-100 hover:scale-105 transition-all duration-100">
+  <span class="tooltiptext">{name}</span>
+  <Icon name={icon} class="size-4 text-primary" />
+</div>

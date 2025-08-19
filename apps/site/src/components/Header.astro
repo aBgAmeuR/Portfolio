@@ -1,0 +1,19 @@
+---
+import { Icon } from "astro-icon/components";
+import ThemeToggle from "./common/ThemeToggle.astro";
+---
+
+<header class="mb-8 px-6 flex items-center justify-between">
+  <div class="flex items-center gap-4">
+    <Icon name="logo" class="h-8 w-16 overflow-visible" />
+    <div class="flex flex-col">
+      <h1 class="text-2xl font-semibold leading-6 tracking-tight">
+        Antoine JOSSET
+      </h1>
+      <h2 class="text-sm font-medium text-muted">
+        Développeur full stack basé à Rennes, France.
+      </h2>
+    </div>
+  </div>
+  <ThemeToggle />
+</header>

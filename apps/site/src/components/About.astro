@@ -1,0 +1,46 @@
+---
+import TechnologyBadge from './common/TechnologyBadge.astro';
+import SocialLink from './common/SocialLink.astro';
+import SectionTitle from './SectionTitle.astro';
+---
+
+<section class="px-6 flex flex-col gap-2">
+  <SectionTitle title="À propos" />
+  <p class="leading-7 text-muted mb-2">Je suis passionné de développement informatique depuis
+    plusieurs années. Actuellement en 3e année de BUT Informatique à Laval, je m'immerge pleinement dans chaque
+    projet, en me concentrant sur un code propre et des solutions efficaces.</p>
+  <p class="leading-7 text-muted mb-2">Je développe mes compétences en développement logiciel
+    grâce
+    aux technologies
+    <TechnologyBadge name="TypeScript" icon="typescript" /> telles que
+    <TechnologyBadge name="Next.js" icon="next" /> et
+    <TechnologyBadge name="Jakarta EE" icon="jee" />, ainsi qu'aux outils de front-end comme
+    <TechnologyBadge name="Tailwind" icon="tailwind" />. Pour le back-end, je me spécialise en
+    <TechnologyBadge name="Java" icon="java" />,
+    <TechnologyBadge name="Rust" icon="rust" /> et
+    <TechnologyBadge name="Symfony" icon="symfony" />. J'utilise également
+    <TechnologyBadge name="Git" icon="git" /> et
+    <TechnologyBadge name="Sql" icon="sql" />
+    pour la gestion de versions et des bases de données.
+  </p>
+  <div class="flex flex-wrap gap-2">
+    <SocialLink 
+      href="https://github.com/aBgAmeuR" 
+      icon="github" 
+      text="@aBgAmeuR" 
+      title="GitHub"
+    />
+    <SocialLink 
+      href="mailto:antoine.josset35@gmail.com" 
+      icon="email" 
+      text="antoine.josset35@gmail.com" 
+      title="Mail"
+    />
+    <SocialLink 
+      href="https://open.spotify.com/user/flps7duvtycn9yto85qwxpqtp" 
+      icon="spotify" 
+      text="Antoine" 
+      title="Spotify"
+    />
+  </div>
+</section>

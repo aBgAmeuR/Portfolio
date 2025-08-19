@@ -1,0 +1,24 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<script is:inline>
+    const toggleTheme = () => {
+        const isDarkMode = document.documentElement.classList.contains("dark");
+        document.documentElement.classList.toggle("dark", !isDarkMode);
+    };
+</script>
+
+<button
+    class="inline-flex items-center cursor-pointer justify-center ring-offset-white dark:ring-offset-[#09090b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:bg-neutral-200 dark:hover:bg-neutral-800 hover:text-neutral-900 dark:hover:text-neutral-100 size-[34px] rounded-md p-2 text-neutral-800 dark:text-neutral-400"
+    onclick="toggleTheme()"
+>
+    <Icon
+        name="sun"
+        class="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+    />
+    <Icon
+        name="moon"
+        class="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+    />
+</button>

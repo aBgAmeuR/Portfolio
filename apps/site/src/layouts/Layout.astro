@@ -1,0 +1,31 @@
+---
+import { Font } from "astro:assets";
+
+export interface Props {
+	title?: string;
+}
+
+const { title = "Portfolio - Antoine JOSSET" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta
+			name="description"
+			content="Développeur full stack basé à Rennes, France."
+		/>
+
+		<Font cssVariable="--font-sans" preload />
+	</head>
+	<body class="bg-background antialiased text-primary font-sans">
+		<main class="w-full mx-auto max-w-2xl pt-16 md:pt-32 pb-8">
+			<slot />
+		</main>
+	</body>
+</html>

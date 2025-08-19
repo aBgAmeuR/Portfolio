@@ -1,0 +1,67 @@
+---
+import ProjectCard from './common/ProjectCard.astro';
+import SectionTitle from './SectionTitle.astro';
+
+const projects = [
+  {
+    title: "Harmony",
+    description: "Application Web qui vous donne des statistiques avancées sur votre compte Spotify.",
+    image: "/videos/harmony.webm",
+    isVideo: true,
+    technologies: [
+      { name: "Next.js", icon: "next" },
+      { name: "TypeScript", icon: "typescript" },
+      { name: "ShadcnUI", icon: "shadcn" },
+      { name: "TailwindCSS", icon: "tailwind" },
+      { name: "Spotify API", icon: "spotify" }
+    ],
+    demoUrl: "https://harmony.antoinejosset.fr",
+    codeUrl: "https://github.com/aBgAmeuR/Harmony"
+  },
+  {
+    title: "PictoSeq",
+    description: "Application qui facilite la création de séquentiels de pictogrammes pour les personnes en situation de handicap.",
+    image: "/images/pictoseq-min.webp",
+    technologies: [
+      { name: "Java", icon: "java" }
+    ],
+    codeUrl: "https://github.com/Matbobe/PictoSeq"
+  },
+  {
+    title: "Booktopia",
+    description: "Site e-commerce de livres, permet de rechercher, ajouter à une liste de souhaits, acheter des livres et gérer le catalogue.",
+    image: "/images/booktopia-min.webp",
+    technologies: [
+      { name: "PHP", icon: "php" },
+      { name: "Symfony", icon: "symfony" }
+    ],
+    codeUrl: "https://github.com/aBgAmeuR/Booktopia"
+  },
+  {
+    title: "Progiso",
+    description: "Plateforme de gestion de projet conçue pour simplifier la gestion des projets des petites et moyennes équipes.",
+    image: "/images/progiso-min.webp",
+    technologies: [
+      { name: "Next.js", icon: "next" },
+      { name: "TypeScript", icon: "typescript" },
+      { name: "ShadcnUI", icon: "shadcn" },
+      { name: "TailwindCSS", icon: "tailwind" }
+    ],
+    demoUrl: "https://progiso.vercel.app",
+    codeUrl: "https://github.com/aBgAmeuR/Progiso"
+  }
+];
+---
+
+<section
+  class="container mt-12 flex w-full max-w-3xl flex-col gap-4 bg-foreground p-6 min-[680px]:rounded-2xl">
+  <SectionTitle 
+    title="Projets" 
+    description="Voici une sélection de mes projets." 
+  />
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    {projects.map((project) => (
+      <ProjectCard {...project} />
+    ))}
+  </div>
+</section>
