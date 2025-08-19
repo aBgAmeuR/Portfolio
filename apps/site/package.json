@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro build && wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "wrangler deploy ./dist --project-name portfolio",
     "astro": "astro"
   },
   "dependencies": {
