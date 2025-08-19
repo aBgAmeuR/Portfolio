@@ -2,12 +2,13 @@
 export interface Props {
   title: string;
   description?: string;
+  id?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, id } = Astro.props;
 ---
 
 <div>
-  <h3 class="font-semibold">{title}</h3>
+  <h3 class="font-semibold" id={id}>{title}</h3>
   {description && <p class="text-muted">{description}</p>}
 </div>

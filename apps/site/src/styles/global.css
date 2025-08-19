@@ -79,3 +79,7 @@
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+.tooltip:focus .tooltiptext {
+    visibility: visible;
+}

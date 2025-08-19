@@ -19,28 +19,50 @@ export interface Props {
 const { title, description, image, imageAlt = "Project image", isVideo = false, technologies, demoUrl, codeUrl } = Astro.props;
 ---
 
-<article>
+<article class="group" aria-labelledby={`project-title-${title.replace(/\s+/g, '-').toLowerCase()}`}>
   <div
-    class="flex w-full flex-col gap-3 rounded-2xl border border-border bg-card p-3">
+    class="flex w-full flex-col gap-2 rounded-2xl border border-border bg-card p-3">
     <div class="w-full overflow-hidden rounded-xl aspect-video object-fill">
       {isVideo ? (
-        <video src={image} autoplay loop muted playsinline width="1920" height="993"></video>
+        <video 
+          src={image} 
+          autoplay 
+          loop 
+          muted 
+          playsinline 
+          width="1920" 
+          height="993"
+          aria-label={`Démonstration vidéo du projet ${title}`}
+          title={`Démonstration du projet ${title}`}
+        ></video>
       ) : (
-        <img src={image} width="1904" height="992" alt={imageAlt} class="size-full object-cover" />
+        <img 
+          src={image} 
+          width="1904" 
+          height="992" 
+          alt={imageAlt} 
+          class="size-full object-cover"
+          loading="lazy"
+        />
       )}
     </div>
     <div class="flex flex-1 flex-col justify-between gap-3">
       <div>
-        <h4 class="text-base font-medium text-neutral-800 dark:text-neutral-100">{title}</h4>
-        <p class="text-sm text-neutral-500 dark:text-neutral-400">{description}</p>
+        <h4 
+          id={`project-title-${title.replace(/\s+/g, '-').toLowerCase()}`}
+          class="text-base font-medium text-primary"
+        >
+          {title}
+        </h4>
+        <p class="text-sm text-muted">{description}</p>
       </div>
       <div class="flex items-center justify-between">
-        <div class="flex gap-1">
+        <div class="flex items-center gap-1" role="group" aria-label={`Technologies utilisées pour ${title}`}>
           {technologies.map((tech) => (
             <TechnologyTooltip name={tech.name} icon={tech.icon} />
           ))}
         </div>
-        <div class="flex items-center gap-1">
+        <div class="flex items-center gap-1" role="group" aria-label={`Liens du projet ${title}`}>
           {demoUrl && (
             <ProjectButton href={demoUrl} variant="demo" text="Tester" />
           )}

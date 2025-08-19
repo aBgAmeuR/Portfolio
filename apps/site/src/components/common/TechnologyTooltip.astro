@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   name: string;
@@ -9,7 +9,18 @@ export interface Props {
 const { name, icon } = Astro.props;
 ---
 
-<div class="tooltip scale-100 hover:scale-105 transition-all duration-100">
-  <span class="tooltiptext">{name}</span>
-  <Icon name={icon} class="size-4 text-primary" />
+<div
+  class="tooltip scale-100 hover:scale-105 transition-all duration-100 relative group"
+  role="tooltip"
+  tabindex="0"
+  aria-describedby={`tooltip-${name.replace(/\s+/g, "-").toLowerCase()}`}
+>
+  <span
+    id={`tooltip-${name.replace(/\s+/g, "-").toLowerCase()}`}
+    class="tooltiptext"
+    role="tooltip"
+  >
+    {name}
+  </span>
+  <Icon name={icon} class="size-4 text-primary" aria-hidden="true" />
 </div>
