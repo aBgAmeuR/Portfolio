@@ -9,9 +9,9 @@ export interface Props {
 const { name, icon } = Astro.props;
 ---
 
-<div
+<span
   class="tooltip scale-100 hover:scale-105 transition-all duration-100 relative group"
-  tabindex="0"
+  role="img"
   aria-label={`Technologie ${name}`}
   title={name}
 >
@@ -22,4 +22,4 @@ const { name, icon } = Astro.props;
     {name}
   </span>
   <Icon name={icon} class="size-4 text-primary" aria-hidden="true" />
-</div>
+</span>

@@ -69,15 +69,10 @@ const projects = [
   />
   <div 
     class="grid grid-cols-1 gap-4 sm:grid-cols-2"
-    role="grid"
     aria-label="Liste des projets"
-    aria-rowcount="2"
-    aria-colcount="2"
   >
-    {projects.map((project, index) => (
-      <div role="gridcell" aria-rowindex={Math.floor(index / 2) + 1} aria-colindex={(index % 2) + 1}>
-        <ProjectCard {...project} />
-      </div>
+    {projects.map((project) => (
+      <ProjectCard {...project} />
     ))}
   </div>
 </section>
