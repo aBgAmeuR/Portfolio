@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+  company: string;
+  job: string;
+  date: string;
+  logo: ImageMetadata;
+  link: string;
+}
+
+const { company, job, date, logo, link } = Astro.props;
+---
+
+<div class="flex items-center gap-2">
+  <Image src={logo} alt={company} class="size-9 object-cover" />
+  <div class="flex flex-col flex-1">
+    <div class="flex justify-between">
+      <h3 class="font-medium leading-tight">{job}</h3>
+      <span class="text-sm text-muted-foreground">
+        {date}
+      </span>
+    </div>
+    <a href={link} class="text-sm text-muted w-fit hover:underline" target="_blank" rel="noreferrer noopener">
+      {company}
+    </a>
+  </div>
+</div>
