@@ -1,0 +1,27 @@
+warning: in the working copy of 'apps/site/astro.config.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'apps/site/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'apps/site/src/layouts/Layout.astro', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'apps/site/src/pages/index.astro', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'apps/site/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pnpm-lock.yaml', LF will be replaced by CRLF the next time Git touches it
+apps/site/astro.config.mjs
+apps/site/package.json
+apps/site/src/assets/orange-logo.jpg
+apps/site/src/components/About.astro
+apps/site/src/components/Footer.astro
+apps/site/src/components/Header.astro
+apps/site/src/components/Projects.astro
+apps/site/src/components/common/ThemeToggle.astro
+apps/site/src/icons/angular.svg
+apps/site/src/icons/email.svg
+apps/site/src/icons/external-link.svg
+apps/site/src/icons/github.svg
+apps/site/src/icons/moon.svg
+apps/site/src/icons/sun.svg
+apps/site/src/layouts/Layout.astro
+apps/site/src/pages/index.astro
+apps/site/src/styles/global.css
+apps/site/tsconfig.json
+package.json
+pnpm-lock.yaml

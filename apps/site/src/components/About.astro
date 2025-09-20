@@ -1,22 +1,27 @@
 ---
-import TechnologyBadge from './common/TechnologyBadge.astro';
-import SocialLink from './common/SocialLink.astro';
-import SectionTitle from './SectionTitle.astro';
+import TechnologyBadge from "./common/TechnologyBadge.astro";
+import SocialLink from "./common/SocialLink.astro";
+import SectionTitle from "./SectionTitle.astro";
 ---
 
 <section class="px-6 flex flex-col gap-2" aria-labelledby="about-title">
   <SectionTitle title="À propos" id="about-title" />
-  <p class="leading-7 text-muted mb-2">Je suis passionné de développement informatique depuis
-    plusieurs années. Actuellement en 3e année de BUT Informatique à Laval, je m'immerge pleinement dans chaque
-    projet, en me concentrant sur un code propre et des solutions efficaces.</p>
-  <p class="leading-7 text-muted mb-2">Je développe mes compétences en développement logiciel
-    grâce
-    aux technologies
+  <p class="leading-7 text-muted mb-2">
+    Je suis passionné de développement informatique depuis plusieurs années.
+    Actuellement un Cycle Mastère (M1-M2) en spécialisation Développement Full
+    Stack à Sup de Vinci Rennes, je m'investis pleinement dans chaque projet en
+    privilégiant un code propre et des solutions efficaces.
+  </p>
+  <p class="leading-7 text-muted mb-2">
+    Je développe mes compétences en développement logiciel grâce aux
+    technologies
     <TechnologyBadge name="TypeScript" icon="typescript" /> telles que
     <TechnologyBadge name="Next.js" icon="next" />,
-    <TechnologyBadge name="Nuxt" icon="nuxt" /> et
-    <TechnologyBadge name="Jakarta EE" icon="jee" />, ainsi qu'aux outils de front-end comme
-    <TechnologyBadge name="Tailwind" icon="tailwind" />. Pour le back-end, je me spécialise en
+    <TechnologyBadge name="Angular" icon="angular" /> et
+    <TechnologyBadge name="Jakarta EE" icon="jee" />, ainsi qu'aux outils de
+    front-end comme
+    <TechnologyBadge name="Tailwind" icon="tailwind" />. Pour le back-end, je me
+    spécialise en
     <TechnologyBadge name="Java" icon="java" />,
     <TechnologyBadge name="Rust" icon="rust" /> et
     <TechnologyBadge name="Symfony" icon="symfony" />. J'utilise également
@@ -24,23 +29,27 @@ import SectionTitle from './SectionTitle.astro';
     <TechnologyBadge name="Sql" icon="sql" />
     pour la gestion de versions et des bases de données.
   </p>
-  <div class="flex flex-wrap gap-2" role="group" aria-label="Liens sociaux et de contact">
-    <SocialLink 
-      href="https://github.com/aBgAmeuR" 
-      icon="github" 
-      text="@aBgAmeuR" 
+  <div
+    class="flex flex-wrap gap-2"
+    role="group"
+    aria-label="Liens sociaux et de contact"
+  >
+    <SocialLink
+      href="https://github.com/aBgAmeuR"
+      icon="github"
+      text="@aBgAmeuR"
       title="GitHub"
     />
-    <SocialLink 
-      href="mailto:antoine.josset35@gmail.com" 
-      icon="email" 
-      text="antoine.josset35@gmail.com" 
+    <SocialLink
+      href="mailto:antoine.josset35@gmail.com"
+      icon="email"
+      text="antoine.josset35@gmail.com"
       title="Mail"
     />
-    <SocialLink 
-      href="https://open.spotify.com/user/flps7duvtycn9yto85qwxpqtp" 
-      icon="spotify" 
-      text="Antoine" 
+    <SocialLink
+      href="https://open.spotify.com/user/flps7duvtycn9yto85qwxpqtp"
+      icon="spotify-duotone"
+      text="Antoine"
       title="Spotify"
     />
   </div>

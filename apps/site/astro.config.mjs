@@ -5,23 +5,24 @@ import icon from 'astro-icon';
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from 'astro-robots-txt';
 import cloudflare from '@astrojs/cloudflare';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://antoinejosset.fr',
+  trailingSlash: "never",
 
   integrations: [icon(), sitemap({
     filter: (page) => {
-      const excludePatterns = ['404', '500', 'dev', 'test'];
+      const excludePatterns = ['404', '500', 'player'];
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
     changefreq: 'weekly',
     priority: 0.7,
     lastmod: new Date()
-  }), robotsTxt()],
+  }), robotsTxt(), react()],
 
   vite: {
-    // @ts-ignore - tailwindcss is not typed
     plugins: [tailwindcss()],
   },
 
