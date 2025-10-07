@@ -26,16 +26,6 @@ export const music = [
 		url: "https://cdn.antoinejosset.fr/jlldsz260pcjlwv40knu6eeq.mp3",
 	},
 	{
-		title: "10:03",
-		artists: ["ApolloRed1"],
-		url: "https://cdn.antoinejosset.fr/eiwnhtt1yq4ncb9vt4m05kfy.mp3",
-	},
-	{
-		title: "Pole on Me",
-		artists: ["ApolloRed1"],
-		url: "https://cdn.antoinejosset.fr/k9982q9s1qkgtmdsze9qafcs.mp3",
-	},
-	{
 		title: "Infinity",
 		artists: ["ApolloRed1", "Protect"],
 		url: "https://cdn.antoinejosset.fr/gcqkedfalyi499ahju5qult0.mp3",
