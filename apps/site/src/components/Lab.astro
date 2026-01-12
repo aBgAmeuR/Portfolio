@@ -1,0 +1,72 @@
+---
+import Image from "astro/components/Image.astro";
+import labImage from "../assets/lab-arch-diagram.svg";
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<section class="px-6 flex flex-col gap-2" aria-labelledby="lab-title">
+    <SectionTitle title="HomeLab" id="lab-title" />
+    <p class="leading-7 text-muted mb-2">
+        Mon projet de serveur personnel "Nas / Homelab rackable U3". L'objectif est de construire une architecture quasi professionnelle, robuste et évolutive, capable d'héberger mes services, mes fichiers et mes environnements de développement.
+    </p>
+</section>
+
+<section class="px-6 flex flex-col gap-2">
+    <SectionTitle title="Architecture" id="architecture-title" />
+    <div
+        class="mb-2 w-full h-auto rounded-lg bg-white overflow-hidden border border-border outline outline-offset-2 outline-border/50 p-2"
+    >
+        <Image src={labImage} alt="Lab Architecture Diagram" class="w-full h-auto" />
+    </div>
+    <p class="leading-7 text-muted mb-2">
+        Le système est conçu autour d'une séparation stricte des responsabilités pour garantir stabilité et sécurité.
+    </p>
+    
+    <h3 class="font-semibold mt-2 text-primary">Infrastructure Critique (LXC)</h3>
+    <p class="leading-7 text-muted">
+        Héberge les services essentiels comme le DNS (Pi-hole/AdGuard). Isolé pour garantir qu'internet fonctionne toujours, même si je casse le reste.
+    </p>
+
+    <h3 class="font-semibold mt-2 text-primary">NAS Dédié (VM)</h3>
+    <p class="leading-7 text-muted">
+        Une machine virtuelle complète tournant sous OpenMediaVault (OMV). Elle gère le stockage de masse (HDD) via des partages SMB/NFS et le monitoring S.M.A.R.T.
+    </p>
+
+    <h3 class="font-semibold mt-2 text-primary">Usine à Applications (LXC Docker)</h3>
+    <p class="leading-7 text-muted">
+        Le cœur de l'activité. Un conteneur piloté par Portainer qui fait tourner :
+    </p>
+    <ul class="list-disc list-inside leading-7 text-muted ml-4">
+        <li><strong>Réseau :</strong> Nginx Proxy Manager & WireGuard.</li>
+        <li><strong>Média :</strong> Immich (avec accélération iGPU).</li>
+        <li><strong>Dev :</strong> GitLab Runners pour le CI/CD local.</li>
+        <li><strong>Monitoring :</strong> Prometheus + Grafana.</li>
+        <li><strong>Data :</strong> Postgres & Redis.</li>
+    </ul>
+</section>
+
+<section class="px-6 flex flex-col gap-2">
+    <SectionTitle title="Matériel & Système" id="specs-title" />
+    
+    <h3 class="font-semibold mt-2 text-primary">La Fondation (Le Fer)</h3>
+    <ul class="list-disc list-inside leading-7 text-muted">
+        <li><strong>CPU :</strong> Intel Core i3-12100.</li>
+        <li><strong>RAM :</strong> 32 Go DDR4.</li>
+        <li><strong>Système :</strong> 1x SSD NVMe 1 To (Proxmox, VMs, DBs).</li>
+        <li><strong>Données :</strong> 2x HDD 4 To WD Red Plus en ZFS Mirror (RAID1).</li>
+        <li><strong>Alim :</strong> be quiet! Pure Power 11 400W Gold.</li>
+        <li><strong>Boîtier :</strong> Rack 19" 3U profondeur 39cm.</li>
+        <li><strong>Refroidissement :</strong> ARCTIC Alpine 17 CO.</li>
+        <li><strong>Ventilateurs :</strong> 3x ARCTIC P12 Pro PST CO 120mm.</li>
+    </ul>
+    <h3 class="font-semibold mt-2 text-primary">Le Cœur (Proxmox VE)</h3>
+    <p class="leading-7 text-muted">
+        J'ai choisi la flexibilité d'un hyperviseur de type 1. Proxmox gère le stockage ZFS et distribue les ressources (vitesse du NVMe ou volume des HDD) aux différentes machines virtuelles selon leurs besoins.
+    </p>
+</section>
+
+<section class="px-6 flex flex-col gap-2">
+    <p class="leading-7 text-muted italic mt-4 border-l-4 border-primary pl-4">
+        "Tu ne construis pas juste un NAS, tu construis une plateforme d'infrastructure personnelle complète."
+    </p>
+</section>

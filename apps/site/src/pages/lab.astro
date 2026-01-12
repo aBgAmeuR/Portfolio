@@ -2,12 +2,10 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
-import MusicList from "../components/player/music-list.astro";
-import AudioPlayer from "../components/player/player.astro";
+import Lab from "../components/Lab.astro";
 ---
 
 <Layout>
 	<Header showTitle={false} />
-	<MusicList className="mb-16" />
-	<AudioPlayer />
+    <Lab />
 </Layout>
