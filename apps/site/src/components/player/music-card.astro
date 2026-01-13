@@ -13,8 +13,6 @@ const { title, artists } = Astro.props;
 <article class="flex justify-between items-center gap-2">
     <span class="truncate">
         <span>{title}</span>
-        <span class="text-muted text-sm">•</span>
-        <span class="text-muted text-sm">{artists.join(", ")}</span>
     </span>
     <button
         data-track-id={getTrackId(title, artists)}
