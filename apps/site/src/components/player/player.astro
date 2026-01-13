@@ -93,9 +93,10 @@ import { Icon } from "astro-icon/components";
 
     <script>
         import { music } from "../../contents/music";
+        import { impact } from "../../contents/impact";
         import { getTrackId } from "../../utils/tracks";
 
-        const tracks = music.map((t) => ({
+        const tracks = [...music, ...impact].map((t) => ({
             id: getTrackId(t.title, t.artists),
             title: t.title,
             artists: t.artists,
