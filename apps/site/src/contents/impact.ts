@@ -62,8 +62,8 @@ export const impact = [
 		url: "https://cdn.antoinejosset.fr/impact/Kirky.flac",
 	},
 	{
-		title: "Outro",
+		title: "Lost without ABG",
 		artists: ["ab_g"],
-		url: "https://cdn.antoinejosset.fr/impact/Outro.flac",
+		url: "https://cdn.antoinejosset.fr/impact/Lost%20without%20ABG.flac",
 	},
 ] satisfies Music[];
