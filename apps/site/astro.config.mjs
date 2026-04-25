@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, fontProviders, passthroughImageService } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import icon from 'astro-icon';
 import sitemap from "@astrojs/sitemap";
@@ -26,15 +26,15 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  experimental: {
-    fonts: [{
-      provider: fontProviders.google(),
-      name: "Geist",
-      weights: [400, 500, 600, 700, 800, 900],
-      cssVariable: "--font-sans",
-      subsets: ["latin"],
-    }]
-  },
+  fonts: [{
+    provider: fontProviders.google(),
+    name: "Geist",
+    weights: [400, 500, 600, 700, 800, 900],
+    cssVariable: "--font-sans",
+    subsets: ["latin"],
+  }],
 
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    prerenderEnvironment: "node"
+  }),
 });

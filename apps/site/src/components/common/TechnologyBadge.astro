@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 
 export interface Props {
   name: string;
-  icon: string;
+  icon?: string;
 }
 
 const { name, icon } = Astro.props;
@@ -14,6 +14,6 @@ const { name, icon } = Astro.props;
   role="img"
   aria-label={`Technologie ${name}`}
 >
-  <Icon name={icon} class="size-3" aria-hidden="true" />
+  {icon && <Icon name={icon} class="h-3.5" aria-hidden="true" />}
   <span>{name}</span>
 </span>
