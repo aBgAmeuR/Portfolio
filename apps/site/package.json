@@ -10,26 +10,22 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.2.1",
-    "@astrojs/react": "^5.0.4",
-    "@astrojs/sitemap": "^3.7.2",
-    "@tailwindcss/vite": "^4.2.4",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "astro": "^6.1.9",
-    "astro-icon": "^1.1.5",
+    "@astrojs/cloudflare": "^13.7.0",
+    "@astrojs/react": "^5.0.7",
+    "@astrojs/sitemap": "^3.7.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "astro": "^6.4.8",
+    "astro-icon": "^1.2.0",
     "astro-robots-txt": "^1.0.0",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
     "rollup-plugin-visualizer": "^6.0.11",
-    "wrangler": "^4.85.0"
-  },
-  "overrides": {
-    "@iconify/tools": "5.0.5",
-    "@iconify/utils": "3.1.0"
+    "wrangler": "^4.125.0"
   }
 }

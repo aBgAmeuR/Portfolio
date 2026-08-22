@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<style type="text/css">
+  @media (prefers-color-scheme: dark) {
+    svg {
+      filter: invert(93%) hue-rotate(180deg);
+      background-color: transparent !important;
+    }
+    image {
+      filter: invert(100%) hue-rotate(180deg) saturate(1.25);
+    }
+  }
+</style>
+
+<Layout title="Homelab - Antoine JOSSET">
+  <Header showTitle={false} />
+
+  <section
+    class="px-6 mb-8 flex flex-col gap-3"
+    aria-labelledby="homelab-title"
+  >
+    <h1
+      id="homelab-title"
+      class="text-2xl font-semibold leading-7 tracking-tight"
+    >
+      Homelab
+    </h1>
+    <p class="max-w-xl text-muted leading-7">
+      Mon infrastructure self-hostee pour mes services perso et mes
+      experimentations.
+    </p>
+    <p class="max-w-xl text-muted leading-7">
+      Ce homelab me sert de bac a sable pour tester des architectures reseau,
+      heberger mes applications et surveiller l'etat de mes services en continu.
+    </p>
+  </section>
+
+  <section
+    class="relative left-1/2 mb-10 flex w-screen max-w-4xl -translate-x-1/2 flex-col gap-4 px-4 sm:px-6"
+  >
+    <button
+      type="button"
+      class="group relative w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+    >
+      <img
+        src="/homelab-architecture-light.svg"
+        class="h-auto w-full object-contain"
+      />
+    </button>
+  </section>
+
+  <section class="px-6 mb-10 flex flex-col gap-6 text-muted leading-7">
+    <h2 id="homelab-details" class="sr-only">Details du homelab</h2>
+
+    <p class="max-w-xl">
+      J'y centralise les acces via reverse proxy, l'authentification SSO,
+      l'observabilite et des applications internes (stats Spotify, PDF,
+      dashboard NAS, etc.).
+    </p>
+
+    <div class="max-w-xl">
+      <p class="mb-2 text-primary font-medium">Briques principales</p>
+      <ul class="space-y-1">
+        <li>Reverse proxy avec Nginx Proxy Manager et DNS Cloudflare</li>
+        <li>SSO avec Authelia pour securiser les applications exposees</li>
+        <li>Monitoring centralise via Grafana, Loki et Prometheus</li>
+        <li>Services self-hostes: Harmony, Vaultwarden, outils NAS</li>
+      </ul>
+    </div>
+
+    <p class="max-w-xl">
+      L'objectif est d'avoir une plateforme fiable, observable et simple a faire
+      evoluer.
+    </p>
+  </section>
+
+  <Footer />
+</Layout>
