@@ -14,7 +14,7 @@ export default defineConfig({
 
   integrations: [icon(), sitemap({
     filter: (page) => {
-      const excludePatterns = ['404', '500', 'player'];
+      const excludePatterns = ['404', '500'];
       return !excludePatterns.some(pattern => page.includes(pattern));
     },
     changefreq: 'weekly',
